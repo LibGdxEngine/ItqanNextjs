@@ -1,6 +1,6 @@
 import SearchBar from "../../components/Courses/SearchBar";
 import FinalCourseItem from "../../components/Courses/MainCourseItems/FinalCourseItem";
-import {getAiCourses} from "../../data/ai_courses_data";
+import {getAiCourses} from "../../ai_courses_data";
 
 const SingleTopicCourses = (props) => {
     const courses = props.courses;

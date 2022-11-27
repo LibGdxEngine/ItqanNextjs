@@ -1,6 +1,6 @@
 import classes from "./VideosList.module.css";
 import {useEffect, useState} from "react";
-import {getAiCourses} from "../../data/ai_courses_data";
+import {getAiCourses} from "../../ai_courses_data";
 
 const VideosList = (props) => {
     const course = props.course;

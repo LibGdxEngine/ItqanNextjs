@@ -4,7 +4,7 @@ import CourseSummary from "../course-detail/course-summary";
 import CourseLogistics from "../course-detail/course-logistics";
 import CourseContent from "../course-detail/course-content";
 import VideosList from "../course-detail/VideosList";
-import {getCourseId} from "../../data/ai_courses_data";
+import {getCourseId} from "../../ai_courses_data";
 
 
 const SingleCoursePreview = (props) => {
