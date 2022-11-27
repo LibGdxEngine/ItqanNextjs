@@ -1,5 +1,5 @@
 import classes from "./VideosList.module.css";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const VideosList = (props) => {
     const course = props.course;

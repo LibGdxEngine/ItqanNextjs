@@ -1,6 +1,7 @@
 import SingleCoursePreview from "../../components/Courses/SingleCoursePreview";
-import {getAiCourses, getCourseId} from "../../ai_courses_data";
+
 import {useRouter} from "next/router";
+import {getCourseId} from "../../ai_courses_data";
 
 const SingleCourse = (props) => {
     const course = props.course;
