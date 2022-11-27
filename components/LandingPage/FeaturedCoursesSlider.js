@@ -64,7 +64,7 @@ export default function FeaturedCoursesSlider() {
                             </div>
                         </div>
                         <div className="w-100 bg-white text-center p-4">
-                            <a className="btn btn-primary" href="/courses/ai">تفاصيل الدورة</a>
+                            <Link className="btn btn-primary" href="/courses/ai">تفاصيل الدورة</Link>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ export default function FeaturedCoursesSlider() {
                             </div>
                         </div>
                         <div className="w-100 bg-white text-center p-4">
-                            <a className="btn btn-primary" href="detail.html">تفاصيل الدورة</a>
+                            <Link className="btn btn-primary" href="#">تفاصيل الدورة</Link>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ export default function FeaturedCoursesSlider() {
                             </div>
                         </div>
                         <div className="w-100 bg-white text-center p-4">
-                            <a className="btn btn-primary" href="detail.html">تفاصيل الدورة</a>
+                            <Link className="btn btn-primary" href="#">تفاصيل الدورة</Link>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ export default function FeaturedCoursesSlider() {
                             </div>
                         </div>
                         <div className="w-100 bg-white text-center p-4">
-                            <a className="btn btn-primary" href="detail.html">تفاصيل الدورة</a>
+                            <Link className="btn btn-primary" href="#">تفاصيل الدورة</Link>
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ export default function FeaturedCoursesSlider() {
                             </div>
                         </div>
                         <div className="w-100 bg-white text-center p-4">
-                            <a className="btn btn-primary" href="detail.html">تفاصيل الدورة</a>
+                            <Link className="btn btn-primary" href="#">تفاصيل الدورة</Link>
                         </div>
                     </div>
                 </div>
