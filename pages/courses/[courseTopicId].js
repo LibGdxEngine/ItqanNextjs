@@ -5,7 +5,7 @@ import {getAiCourses} from "../../ai_courses_data";
 const SingleTopicCourses = (props) => {
     const courses = props.courses;
 
-    return <div style={{display: 'flex', margin: "0", flexDirection: "column"}}>
+    return <div style={{display: 'flex', margin: "0", flexDirection: "column", minWidth: "100%"}}>
         <SearchBar/>
         <div style={{
             display: "flex", flexDirection: "row", flexWrap: "wrap",

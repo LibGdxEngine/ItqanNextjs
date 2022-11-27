@@ -1,14 +1,13 @@
 .heroSection {
-    margin: 30px;
+    margin: 0px;
     display: flex;
     justify-content: right;
     align-items: center;
     font-size: 16px;
-
 }
 
-.heroInfo{
-    margin: 30px;
+.heroInfo {
+    margin: 0px;
     text-align: right;
 }
 
@@ -22,14 +21,14 @@
     height: 100%;
     width: 100%;
 }
+
 .aicourseCard {
     display: flex;
     flex-direction: column;
     text-decoration: none;
     padding: 1rem;
     color: #fff;
-    background: url(https://svgshare.com/i/KcP.svg) no-repeat bottom 20px right
-    20px,
+    background: url(https://svgshare.com/i/KcP.svg) no-repeat bottom 20px right 20px,
     linear-gradient(241.95deg, #244fa3 0%, #2590a7 100%);
     border-radius: 5px;
     height: 300px;
@@ -57,15 +56,13 @@
 }
 
 
-
 .courseCard {
     display: flex;
     flex-direction: column;
     text-decoration: none;
     padding: 1rem;
     color: #fff;
-    background: url(https://svgshare.com/i/KcP.svg) no-repeat bottom 20px right
-    20px,
+    background: url(https://svgshare.com/i/KcP.svg) no-repeat bottom 20px right 20px,
     linear-gradient(241.95deg, #244fa3 0%, #2590a7 100%);
     border-radius: 5px;
     height: 300px;
@@ -83,10 +80,9 @@
     /*transform: scale(1.025) translateY(-5px);*/
     transform: scale(1.025);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
-
 }
 
-.courseCard:active {
+.courseCard:active  {
     text-decoration: none;
     color: #fff;
     transform: scale(0.95);
@@ -119,21 +115,39 @@
     max-width: 90%;
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 350px) {
+    .heroSection {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+    }
+    .courseCardContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-auto-rows: minmax(250px, 1fr);
+        gap: 40px;
+        padding: 40px 40px 290px 40px;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 
 .courseCard::after{
-    position: absolute;
+    position: relative;
     content: 'قريبا ان شاء الله';
-    top: 11px;
+    top: -150px;
     font-size: 24px;
-    right: -14px;
+    right: -75%;
     padding: 0.5rem;
     width: 10rem;
     background: #ffffff;
     color: #3949ab;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    /*display: none;*/
     /*box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.92);*/
 }
