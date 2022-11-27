@@ -13,7 +13,6 @@ function CourseLogistics(props) {
   //   year: 'numeric',
   // });
   // const addressText = address.replace(', ', '\n');
-  console.log(img);
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>

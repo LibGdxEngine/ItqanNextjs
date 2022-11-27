@@ -10,6 +10,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
+import {useRouter} from "next/router";
 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
@@ -45,6 +46,7 @@ const options = {
 
 
 export default function FeaturedCoursesSlider() {
+    const router = useRouter();
     return (
         <div className="container-fluid px-0 py-5">
             <OwlCarousel className="courses-carousel" {...options}>
@@ -62,7 +64,7 @@ export default function FeaturedCoursesSlider() {
                             </div>
                         </div>
                         <div className="w-100 bg-white text-center p-4">
-                            <a className="btn btn-primary" href="detail.html">تفاصيل الدورة</a>
+                            <a className="btn btn-primary" href="/courses/ai">تفاصيل الدورة</a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +117,7 @@ export default function FeaturedCoursesSlider() {
                             </div>
                         </div>
                         <div className="w-100 bg-white text-center p-4">
-                            <a className="btn btn-primary" href="detail.html">تفاصيل الدورة</a>
+                            <Link className="btn btn-primary" href="/courses/ai">تفاصيل الدورة</Link>
                         </div>
                     </div>
                 </div>

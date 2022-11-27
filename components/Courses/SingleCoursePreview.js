@@ -1,20 +1,14 @@
-import {Fragment} from "react";
+import {Fragment, useEffect} from "react";
 import Head from "next/head";
 import CourseSummary from "../course-detail/course-summary";
 import CourseLogistics from "../course-detail/course-logistics";
 import CourseContent from "../course-detail/course-content";
 import VideosList from "../course-detail/VideosList";
+import {getCourseId} from "../../data/ai_courses_data";
 
 
 const SingleCoursePreview = (props) => {
-    let course = {
-        title: "دورة الذكاء الصناعي وعلوم البيانات",
-        instructor:'أحمد فتحي',
-        time:"1h 20m",
-        image:"./ds_course.jpg",
-        imageAlt:"",
-        description:"هذه الدورة الأولى في سلسلة دورات الذكاء الصناعي وعلوم البيانات وهي دورة قوية ومهمة لكل طالب ذكاء صناعي"
-    }
+    const course = props.course;
     return <Fragment>
         <Head>
             <title>Itqan - إتقان</title>
@@ -24,12 +18,13 @@ const SingleCoursePreview = (props) => {
             />
         </Head>
         <CourseSummary title={course.title}/>
-        <CourseLogistics instructor={course.instructor} time={course.time} img={course.image} alt={course.title}/>
+        <CourseLogistics instructor={course.instructor} time={course.time} img={course.image} z213alt={course.title}/>
         <CourseContent>
             <p>{course.description}</p>
         </CourseContent>
-        <VideosList />
+        <VideosList course={course}/>
     </Fragment>
 };
+
 
 export default SingleCoursePreview;

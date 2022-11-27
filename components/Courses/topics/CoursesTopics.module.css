@@ -22,6 +22,41 @@
     height: 100%;
     width: 100%;
 }
+.aicourseCard {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 1rem;
+    color: #fff;
+    background: url(https://svgshare.com/i/KcP.svg) no-repeat bottom 20px right
+    20px,
+    linear-gradient(241.95deg, #244fa3 0%, #2590a7 100%);
+    border-radius: 5px;
+    height: 300px;
+    justify-content: center;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.3);
+    /*text-shadow: 0px 1px 1px #000000;*/
+}
+
+.aicourseCard:hover {
+    color: #fff;
+    text-decoration: none;
+    /*transform: scale(1.025) translateY(-5px);*/
+    transform: scale(1.025);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.aicourseCard:active {
+    text-decoration: none;
+    color: #fff;
+    transform: scale(0.95);
+    box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.3);
+}
+
+
 
 .courseCard {
     display: flex;
@@ -38,15 +73,17 @@
     padding: 2rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.3);
-    text-shadow: 0px 1px 1px #000000;
+    /*text-shadow: 0px 1px 1px #000000;*/
 }
 
 .courseCard:hover {
+    cursor: pointer;
     color: #fff;
     text-decoration: none;
     /*transform: scale(1.025) translateY(-5px);*/
     transform: scale(1.025);
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+
 }
 
 .courseCard:active {
@@ -83,4 +120,20 @@
 }
 
 @media screen and (min-width: 765px) {
+}
+
+
+.courseCard::after{
+    position: absolute;
+    content: 'قريبا ان شاء الله';
+    top: 11px;
+    font-size: 24px;
+    right: -14px;
+    padding: 0.5rem;
+    width: 10rem;
+    background: #ffffff;
+    color: #3949ab;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    /*box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.92);*/
 }

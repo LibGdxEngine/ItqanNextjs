@@ -1,295 +1,51 @@
 import classes from "./VideosList.module.css";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {getAiCourses} from "../../data/ai_courses_data";
 
 const VideosList = (props) => {
-    const [isPlaying, setIsPlaying] = useState(true);
+    const course = props.course;
+    const videos = course.lessons;
+    let selectedItemClass = classes.item + " " + classes.active;
+    const [selectedVideo, setSelectedVideo] = useState(videos[0])
+
+    function handleVideoItemClick(video, event) {
+        setSelectedVideo(video);
+    }
+
     return <div className={classes.videoContainer}>
         <div className={classes.videoContainer}>
+
             <ul className={classes.videos}>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item + " " + classes.active}>
-                        الدرس الأول
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item}>
-                        الدرس الثاني
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span className={classes.icon}></span>
-                    </div>
-                    <div className={classes.item }>
-                        الدرس الثالث
-                    </div>
-                </li>
+                {videos.map((video) => {
+                    return <div key={video.video_id}>
+                        <li onClick={() => handleVideoItemClick(video)}>
+                            <div>
+                                <span className={classes.icon}></span>
+                            </div>
+                            <div
+                                className={video.video_id === selectedVideo.video_id ? selectedItemClass : classes.item}>
+                                {video.title}
+                            </div>
+                        </li>
+                    </div>
+                })}
             </ul>
         </div>
         <div className={classes.info}>
-            <video width={1000} height={600}
-                   poster="/header.jpg"
-                   src="/video.mp4"
-                   controlsList="nodownload"
-                   type="video/mp4"
-                   autoPlay={false}
-                   controls={true}
+            <iframe className={classes.videoPlayer}
+                    src={"https://drive.google.com/file/d/" + selectedVideo.video_id + "/preview"} width="640"
+                    height="480"
+                    allowFullScreen={true}
+                    allow="autoplay"></iframe>
 
-            />
+            {/*<video */}
+            {/*       poster="/header.jpg"*/}
+            {/*       src={selectedVideo.video_id}*/}
+            {/*       controlsList="nodownload"*/}
+            {/*       type="video/mp4"*/}
+            {/*       autoPlay={selectedVideo === videos[0] ? false : true}*/}
+            {/*       controls={true}*/}
+            {/*/>*/}
         </div>
     </div>
 

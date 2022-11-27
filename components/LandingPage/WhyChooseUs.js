@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const WhyChooseUs = (props) => {
   return <div>
-      <div className="container-fluid bg-Image" style={{margin: '90px'}}>
-          <div className="container">
+      <div className="container-fluid py-5" style={{margin: '3px'}}>
+          <div className="container py-5">
               <div className="row">
                   <div className="col-lg-7 my-5 pt-5 pb-lg-5">
                       <div className="section-title position-relative mb-4" style={{textAlign:'right'}}>

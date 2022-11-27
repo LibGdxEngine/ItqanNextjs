@@ -25,31 +25,31 @@ const AboutUs = (props) => {
                           طريقة من خلال شروحات سهلة ومتدرجة ومدعمة بالكثير من الاختبارات والمشاريع العملية. كل هذا وأكثر متوفر على معهد إتقان.
                            جميع دوراتنا مصنوعة باهتمام شديد حتى تناسب جميع الأعمار والمستويات وتصل في النهاية إلى الهدف المرجو وهو الحصول على الخبرة العلمية والعملية الكافية للمنافسة في مجال البرمجة بقوة
                       </p>
-                      <div className="row pt-3 mx-0">
+                      <div className="row pt-4 mx-0">
                           <div className="col-3 px-0">
                               <div className="bg-success text-center p-4">
-                                  <CountUp style={{fontSize:'2.3rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={100} />
+                                  <CountUp style={{fontSize:'1.5rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={100} />
                                   <h5 className="text-uppercase text-white">ـ<span
                                       className="d-block">الدروس</span></h5>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-primary text-center p-4">
-                                  <CountUp style={{fontSize:'2.3rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={30} />
+                                  <CountUp style={{fontSize:'1.5rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={30} />
                                   <h5 className="text-uppercase text-white">ـ<span
                                       className="d-block">الاختبارات</span></h5>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-secondary text-center p-4">
-                                  <CountUp style={{fontSize:'2.3rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={4} />
+                                  <CountUp style={{fontSize:'1.5rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={4} />
                                   <h5 className="text-uppercase text-white">ـ<span
                                       className="d-block">المدرسين</span></h5>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-warning text-center p-4">
-                                  <CountUp style={{fontSize:'2.3rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={1000} />
+                                  <CountUp style={{fontSize:'1.5rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={1000} />
                                   <h5 className="text-uppercase text-white">ـ<span
                                       className="d-block">الطلاب</span></h5>
                               </div>

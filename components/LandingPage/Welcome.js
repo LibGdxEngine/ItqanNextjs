@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Welcome = (props) => {
   return <div>
       <div className="jumbotron jumbotron-fluid position-relative overlay-bottom"
@@ -19,7 +21,10 @@ const Welcome = (props) => {
                       <input type="text" className="form-control border-light" style={{padding: '50px 20px'}}
                              placeholder="ماذا تريد ان تتعلم؟"/>
                       <div className="input-group-append">
-                          <button className="btn btn-secondary px-4 px-lg-5">ابحث</button>
+                          <Link className="input-group-append" href={"/courses"}>
+                              <button  className="btn btn-secondary px-4 px-lg-5">ابحث</button>
+                          </Link>
+
                       </div>
                   </div>
               </div>
