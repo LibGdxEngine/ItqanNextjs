@@ -47,7 +47,7 @@ const NavBar = (props) => {
                 <div className="navbar-nav mx-auto py-0">
                     <Link href="/" className={activeClassName('/')}>الرئيسية</Link>
                     <Link href="/courses" className={activeClassName('/courses')}>تعلم معنا</Link>
-                    <Link href="/admin" className="nav-item nav-link">تعرف علينا</Link>
+                    <Link href="/login" className="nav-item nav-link">تسجيل</Link>
                     <Link href="#" className="nav-item nav-link">تواصل معنا</Link>
 
                 </div>
