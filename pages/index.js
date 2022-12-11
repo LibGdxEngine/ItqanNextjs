@@ -10,13 +10,7 @@ import OurInstructors from "../components/LandingPage/OurInstructors";
 export default function Home() {
     return (
         <div>
-            <Head>
-                <meta charSet="utf-8"/>
-                <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-                <title>اتقان</title>
-                <meta name="description" content="هذا التطبيق خاص بموقع اتقان"/>
-                <link rel="icon" href="/favicon.ico"/>
-            </Head>
+
 
             <main className={styles.main}>
 

@@ -19,9 +19,10 @@ async function handler(req, res) {
         }
         const enteredHashPassword = await hashPassword(password);
         try {
+
             const response = await fetch("https://itqan-32c83-default-rtdb.firebaseio.com/users.json", {
                 method: "POST",
-                body: JSON.stringify({email: email, password: enteredHashPassword}),
+                body: JSON.stringify({email, enteredHashPassword}),
                 headers: {
                     "Content-Type": "application/json"
                 }

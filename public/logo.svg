@@ -1,0 +1,20 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+	<title>v1033-a-06-c-ai-svg</title>
+	<style>
+		.s0 { fill: #222221;stroke: #222221;stroke-linecap: round;stroke-linejoin: round;stroke-width: 13.7 } 
+		.s1 { fill: none;stroke: #222221;stroke-linecap: round;stroke-linejoin: round;stroke-width: 15 } 
+		.s2 { fill: #ebb211 } 
+		.s3 { fill: none;stroke: #222221;stroke-linecap: round;stroke-linejoin: round;stroke-width: 13.7 } 
+		.s4 { fill: none;stroke: #222221;stroke-linecap: round;stroke-linejoin: round;stroke-width: 13 } 
+	</style>
+	<g id="Graphic Elements">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Path&gt;" class="s0" d="m918.9 350.3l-303.6 162.9-303.6-162.9 303.6-162.8z"/>
+			<path id="&lt;Path&gt;" class="s1" d="m838.6 434.5v74.9l-223 119.6h-0.3l-223.1-119.6v-74.9"/>
+			<path id="&lt;Path&gt;" class="s2" d="m344.9 629h-66.5v-191.5l33.3-50.4 33.2 50.4z"/>
+			<path id="&lt;Path&gt;" class="s3" d="m885.4 595.5v-202.1"/>
+			<path id="&lt;Path&gt;" class="s3" d=""/>
+			<path id="&lt;Path&gt;" class="s4" d="m851.9 629l33.5-33.5 33.5 33.5z"/>
+		</g>
+	</g>
+</svg>

@@ -1,36 +1,37 @@
 import SearchBar from "../../components/Courses/SearchBar";
 import FinalCourseItem from "../../components/Courses/MainCourseItems/FinalCourseItem";
 import {getAiCourses} from "../../ai_courses_data";
+import CourseDetails from "../../components/Courses/CourseDetails/CourseDetails";
+import {getDsCourses} from "../../ds_courses_data";
 
 const SingleTopicCourses = (props) => {
     const courses = props.courses;
 
-    return <div style={{display: 'flex', margin: "0", flexDirection: "column", minWidth: "100%"}}>
-        <SearchBar/>
-        <div style={{
-            display: "flex", flexDirection: "row", flexWrap: "wrap",
-            justifyContent: "center"
-        }}>
-            {courses.map(course => <FinalCourseItem key={course.id} course={course}/>)}
-        </div>
+    return <div>
+        <CourseDetails courses={courses}/>
     </div>
 };
 
-export async function getStaticPaths() {
-    const courses = await getAiCourses();
-    const paths = courses.map(course => ({params: {topic: "ai", courseTopicId: course.title}}));
-    return {
-        paths: paths,
-        fallback: 'blocking'
+export async function getServerSideProps(context) {
+    const courseTopicId = context.params.courseTopicId;
+    console.log(courseTopicId)
+    // const course = getCourseId(coursesId)
+    let courses = null;
+    if (courseTopicId === "ai") {
+        courses = getAiCourses();
+    } else if (courseTopicId === "ds") {
+        courses = getDsCourses();
     }
-}
+    if (!courses || courses.length === 0) {
+        return {
+            notFound: true
+        }
+    }
 
-export async function getStaticProps(context) {
-    const courses = await getAiCourses();
     return {
         props: {
             courses: courses,
-        }, // will be passed to the page component as props
+        }
     }
 }
 

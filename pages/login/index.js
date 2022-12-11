@@ -1,19 +1,36 @@
 import LoginForm from "../../components/login/LoginForm";
+import {useEffect, useState} from "react";
+import {getSession} from "next-auth/react";
+import {useRouter} from "next/router";
+import classes from '../../styles/login.module.css';
 
 export default function Login() {
-    return <div style={{
-        margin: "auto",
-        width: "20%",
-        border: "0px none green",
-        padding: "0px",
-        marginBottom: "20%",
-        marginTop: "3%"
-    }}>
+    const router = useRouter();
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadedSession, setLoadedSession] = useState();
+
+    useEffect(() => {
+        getSession().then(session => {
+            if (session) {
+                router.replace("/");
+            } else {
+                setIsLoading(false);
+            }
+        })
+    }, [router]);
+
+    if (isLoading) {
+        return <p>Loading...</p>;
+    }
+
+    return <div className={classes.authFormContainer}>
         <div>
-            <h3 style={{textAlign: "center", direction: "rtl", width: "350px", marginBottom:"5%"}}>احجز مكانك في عالم
-                البرمجة</h3>
+            <h3>احجز مكانك في عالم البرمجة</h3>
         </div>
 
         <LoginForm/>
+
     </div>
 };
+
+
