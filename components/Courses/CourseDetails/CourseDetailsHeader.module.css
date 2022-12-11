@@ -1,0 +1,216 @@
+.header {
+    width: 100%;
+    height: 120vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+    url("https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1147&q=80");
+    background-size: cover;
+    background-blend-mode: darken;
+    background-repeat: repeat-y;
+}
+
+.courseDetailsContainer {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.courseTitle {
+    color: #ddd;
+    font-size: 5rem;
+    animation: anim 2s;
+}
+
+.courseDescription {
+    color: #ddd;
+    font-size: 1.5rem;
+    animation: anim 1.5s .5s backwards;
+}
+
+.courseInstructorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: anim 1s 1s backwards;
+}
+
+.instructorImage {
+    margin-bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.instructorName {
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+.coursePrice {
+    color: #ef4545;
+    font-size: 1.5rem;
+}
+
+.courseActions {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.coursePreviewVideo {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.c1:first-child:hover {
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+
+.coursePreviewTitle {
+    padding: 1.1rem 0 .9rem .9rem;
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+.c1 {
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(255, 255, 255, .05);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.c2 {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.courseTiming {
+    width: 30rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    color: #ddd;
+    justify-content: center;
+}
+
+.courseTimingContainer {
+    width: 9rem;
+}
+
+.courseTimingContainer span {
+    padding-left: .8rem;
+}
+
+.courseTimingMonths {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.buyCourseBtnContainer {
+
+}
+
+.buyCourseBtn {
+    padding: .6rem 1.5rem;
+    border: none;
+    border-radius: 0;
+    background-color: #2cc701;
+    color: #ddd;
+    font-size: 1.2rem;
+    font-weight: 400;
+    box-shadow: 1rem 3rem 6rem #777;
+    transition: all .3s;
+}
+
+.buyCourseBtn:hover,
+.buyCourseBtn:first-child:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #1e9302;
+    outline: none;
+}
+
+.space{
+    height: 15rem;
+}
+
+
+@media (max-width: 800px) {
+    .courseTitle {
+        font-size: 2.5rem;
+    }
+
+    .courseDescription {
+        font-size: .9rem;
+    }
+
+    .courseActions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .space{
+        height: 0rem;
+    }
+
+    .courseTiming {
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        font-size: .5rem;
+        color: #ddd;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

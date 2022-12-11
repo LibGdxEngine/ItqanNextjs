@@ -22,7 +22,7 @@ const Welcome = (props) => {
                              placeholder="ماذا تريد ان تتعلم؟"/>
                       <div className="input-group-append">
                           <Link className="input-group-append" href={"/courses"}>
-                              <button  className="btn btn-secondary px-4 px-lg-5">ابحث</button>
+                              <button  className={"btn btn-secondary px-4 px-lg-5"}>ابحث</button>
                           </Link>
 
                       </div>

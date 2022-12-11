@@ -1,5 +1,7 @@
 import classes from "./LoginForm.module.css";
 import {useRef, useState} from "react";
+import {signIn} from "next-auth/react";
+import {useRouter} from "next/router";
 
 async function createUser(email, password) {
     const response = await fetch("/api/auth/signup", {
@@ -19,10 +21,14 @@ async function createUser(email, password) {
 }
 
 const LoginForm = (props) => {
+    const router = useRouter();
     const [isSignUp, setIsSignUp] = useState(true);
     const userNameInputRef = useRef();
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
+
+    const loginEmailInputRef = useRef();
+    const loginPasswordInputRef = useRef();
 
     let signUpClass = "";
     let loginClass = "";
@@ -50,6 +56,9 @@ const LoginForm = (props) => {
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
 
+        const enteredLoginEmail = loginEmailInputRef.current.value;
+        const enteredLoginPassword = loginPasswordInputRef.current.value;
+
         // optional add validation here
 
         if (isSignUp) {
@@ -62,8 +71,18 @@ const LoginForm = (props) => {
 
         } else {
             //log in the user
-        }
+            // console.log(enteredLoginPassword, enteredLoginEmail);
+            const result = await signIn("credentials", {
+                redirect: false,
+                email: enteredLoginEmail,
+                password: enteredLoginPassword,
+            });
 
+            if(!result.error){
+                router.replace("/courses");
+            }
+        }
+        window.location.reload();
 
     }
 
@@ -89,8 +108,10 @@ const LoginForm = (props) => {
                         الدخول
                     </h2>
                     <div className={classes.formHolder}>
-                        <input type="email" required={true} className={classes.input} placeholder="البريد الإلكتروني"/>
-                        <input type="password" required={true} className={classes.input} placeholder="كلمة السر"/>
+                        <input type="email" ref={loginEmailInputRef} required={true} className={classes.input}
+                               placeholder="البريد الإلكتروني"/>
+                        <input type="password" ref={loginPasswordInputRef} required={true} className={classes.input}
+                               placeholder="كلمة السر"/>
                     </div>
                     <button className={classes.submitBtn}>تسجيل الدخول</button>
                 </div>

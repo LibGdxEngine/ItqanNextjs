@@ -12,7 +12,7 @@ const AI_DATA = [
         "insteadPrice": null,
         "lessons": [
             {
-                "title": "الدرس الأول",
+                "title": "الدرس الأول من دورة الذكاء الصناعي وعلوم البيانات الحديثة لكلية الذمكاء الصالسشيس",
                 "video_id": "1AETv0996kMRsRR0DFMJZ_UxvwULl7N__"
             },
             {
@@ -323,7 +323,7 @@ const AI_DATA = [
 ];
 
 export function getAiCourses() {
-    return AI_DATA
+    return AI_DATA;
 }
 
 export function getCourseId(courseId) {

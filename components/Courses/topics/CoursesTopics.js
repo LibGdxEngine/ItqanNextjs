@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 const CoursesTopics = (props) => {
-    return <div>
+    return <div className={classes.topicsContainer}>
         <section className={classes.heroSection}>
             <div className={classes.heroInfo}>
                 <h1> دورات قوية - مبسطة - عملية</h1>
                 <p> كل ما تحتاجه في مكان واحد</p>
             </div>
-            <Image src="https://svgshare.com/i/Kbj.svg" width={250} height={250}/>
+            <Image src="https://svgshare.com/i/Kbj.svg" width={250} height={250} alt={"s"}/>
         </section>
         <section className={classes.courseCardContainer}>
             <div>
@@ -43,11 +43,11 @@ const CoursesTopics = (props) => {
             </div>
 
             <div>
-                <div href="#" className={classes.courseCard + " " + classes.courseCardDigi}>
+                <Link href="/courses/ds" className={classes.courseCard + " " + classes.courseCardDigi}>
                     <h2 className={classes.courseCardHeading}>الخوارزميات وهيكلة البيانات</h2>
                     <p className={classes.courseCardDesc}>تعلم جميع الخوارزميات المهمة لكل مهندسي البرمجيات</p>
 
-                </div>
+                </Link>
             </div>
 
             <div>

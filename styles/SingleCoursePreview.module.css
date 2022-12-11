@@ -1,0 +1,50 @@
+.coursePreviewContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.videosListContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.contentTable{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.contentParagraph{
+
+}
+
+.contentTitle{
+
+}
+
+.courses{
+
+}
+
+.courseVideoPlayerContainer{
+    width: 100%;
+    height: 520px;
+}
+
+.info {
+    position: relative;
+    padding-bottom: 73%;
+    height: 100%;
+    width: 100%;
+}
+.info iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+}

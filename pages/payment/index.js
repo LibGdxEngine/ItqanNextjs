@@ -87,7 +87,7 @@ const Payment = (props) => {
 
     return <div>
         <Link width={1000} height={700}
-                href={`https://accept.paymob.com/api/acceptance/iframes/708308?payment_token=${token}`}>
+              href={`https://accept.paymob.com/api/acceptance/iframes/708308?payment_token=${token}`}>
             hasd
         </Link>
     </div>
