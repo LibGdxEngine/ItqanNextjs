@@ -85,11 +85,10 @@ const Payment = (props) => {
         fetchData().catch(console.error)
     }, [fetchData]);
 
-    return <div>
-        <Link width={1000} height={700}
-              href={`https://accept.paymob.com/api/acceptance/iframes/708308?payment_token=${token}`}>
-            hasd
-        </Link>
+    return <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+        <iframe src="https://paymes.shop/embedv1.php?id=234259305" frameBorder="0" height="430px"
+                width="270px"></iframe>
+
     </div>
 };
 

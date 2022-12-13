@@ -5,6 +5,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+}
+.chapterVideosContent:hover{
+    background-color: rgba(148, 148, 148, 0.28);
 }
 
 .chapterTimingContainer {

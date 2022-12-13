@@ -5,7 +5,8 @@ import {useRouter} from "next/router";
 const PreviewLessonItem = (props) => {
     const lesson = props.lesson;
 
-    return <div onClick={props.onChapterItemClicked.bind(this, lesson.video_id)} className={classes.chapterVideosContent} key={lesson.video_id}>
+    return <div onClick={props.onChapterItemClicked.bind(this, lesson.video_id)}
+                className={classes.chapterVideosContent} key={lesson.video_id}>
         <div className={classes.chapterVideoDetailsContainer}>
             <div className={classes.chapterTimingContainer}>
                 <Image src={"/time-black.png"} width={20} height={20} alt={""}></Image>
