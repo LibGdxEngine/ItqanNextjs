@@ -1,0 +1,170 @@
+.navbarContainer {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarLogo {
+
+}
+
+.navbarLogoImage {
+    margin: 0 .8rem;
+}
+
+.navbarAccountIcon {
+    border: 1px solid black;
+    padding: .2rem;
+    border-radius: 50%;
+    margin: 0 2rem;
+}
+
+
+.navbarItemsContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarItems {
+    display: flex;
+    width: 100%;
+
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbarItem {
+    color: #00499a;
+    font-size: 1.1rem;
+    margin: .5rem 1.3rem;
+}
+
+.navbarItem:hover {
+    color: dodgerblue;
+    margin: .5rem 1.3rem;
+    text-decoration: none;
+    transform: scale(1.05, 1.05);
+    transition: all .2s ease-in-out;
+}
+
+
+.actionBtn {
+    margin: 0 1rem;
+    text-decoration: none;
+    padding: .9rem .3rem;
+    width: 7rem;
+    text-align: center;
+    font-size: .85rem;
+    color: white;
+    background-color: dodgerblue;
+}
+
+.actionBtn:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #00458a;
+    transform: scale(1.05, 1.05);
+    transition: all .2s ease-in-out;
+}
+
+.collapsedMenuContainer {
+    display: none;
+}
+
+.menuLabel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuIcon {
+    position: relative;
+    top: .35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.line {
+    height: .15rem;
+    width: 2.5rem;
+    background-color: #222;
+    margin-bottom: .6rem;
+    transition: all .6s ease-in-out;
+}
+
+.line2{
+    transition: all .6s ease-in-out;
+}
+
+.line1, .line3 {
+    width: 1.8rem;
+    /*transition: all .4s;*/
+    transition: all .6s ease-in-out;
+}
+
+.menuIcon:hover .line {
+    width: 2.5rem;
+}
+
+
+.checkbox:checked ~ .navigation {
+    width: 0px;
+    height: 0px;
+    left: 0rem;
+}
+
+.line1Clicked {
+    transform: rotate(-405deg) translate(-6px, 8px);
+    width: 2rem;
+}
+
+.line2Clicked {
+    opacity: 0;
+}
+
+.line3Clicked {
+    transform: rotate(405deg) translate(-8px, -11px);
+    width: 2rem;
+}
+
+.collapse{
+    width: 100%;
+    overflow: hidden;
+    transition: 0.4s max-height;
+}
+
+.collapse > div {
+    overflow: auto;
+}
+
+.collapsedMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 750px) {
+    .navbarItemsContainer {
+        display: none;
+    }
+
+    .collapsedMenuContainer {
+        margin: 0 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}

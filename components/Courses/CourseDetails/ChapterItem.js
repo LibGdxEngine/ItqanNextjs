@@ -23,14 +23,15 @@ const ChapterItem = (props) => {
             <div className={classes.chapterDetailsContainer}>
                 <div className={classes.chapterTimingContainer}>
                     <Image src={"/time-black.png"} width={20} height={20} alt={""}></Image>
-                    <span className={classes.chapterTimingMonths}>22:00 دقيقة</span>
+                    <span className={classes.chapterTimingMonths}>{course.duration} دقيقة</span>
                 </div>
-                <span>/</span>
+                <span></span>
                 <div className={classes.chapterTimingContainer}>
                     <Image src={"/video-black.png"} width={20} height={20} alt={"s"}></Image>
-                    <span className={classes.chapterTimingMonths}>12 فيديو</span>
+                    <span className={classes.chapterTimingMonths}>{course.lessons.length} فيديو</span>
                 </div>
             </div>
+
             <div onClick={handleClick} className={classes.chapterTitleContainer}>
                 <h4 className={classes.chapterTitle}>{course.title}</h4>
                 <Image className={classes.expandArrow}

@@ -1,7 +1,6 @@
 import classes from "./PreviewChapterItem.module.css";
 import Image from "next/image";
 import {useState} from "react";
-import {useRouter} from "next/router";
 import PreviewLessonItem from "./PreviewLessonItem";
 
 const PreviewChapterItem = (props) => {
@@ -12,10 +11,6 @@ const PreviewChapterItem = (props) => {
 
     function handleClick() {
         setItemIsOpened(!itemIsOpened);
-    }
-    const router = useRouter();
-    function handleLessonClicked() {
-        router.push(`/courses/ai/${course.id}`)
     }
 
     return <div className={classes.chapterItem}>

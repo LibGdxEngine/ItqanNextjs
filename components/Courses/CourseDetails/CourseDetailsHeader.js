@@ -9,6 +9,8 @@ const CourseDetailsHeader = (props) => {
     const {data: session, status} = useSession();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+    const course = props.course;
+
     useEffect(() => {
         getSession().then(session => {
             if (session) {
@@ -23,19 +25,20 @@ const CourseDetailsHeader = (props) => {
     return <div className={classes.header}>
         <div className={classes.courseDetailsContainer}>
             <br/>
-            <h1 className={classes.courseTitle}>الذكاء الصناعي وعلوم البيانات</h1>
-            <p className={classes.courseDescription}>هذه الدورة مهمة لكل طالب مهتم بعلوم البيانات والذكاء الاصطناعي
-                بشكل عام</p>
+            <h4 className={classes.courseTitle}>{course.title}</h4>
+            <p className={classes.courseDescription}>
+                {course.description}
+            </p>
 
             <div className={classes.courseInstructorContainer}>
                 <Image className={classes.instructorImage} src={"/me.jpeg"} width={100} height={100}
                        alt={"img"}></Image>
-                <h6 className={classes.instructorName}>أحمد فتحي</h6>
+                <h6 className={classes.instructorName}>شرح/ {course.instructor}</h6>
             </div>
             <div className={classes.space}>
 
             </div>
-            <h4 className={classes.coursePrice}>400 EGP</h4>
+
 
             <div className={classes.courseActions}>
                 <div className={classes.coursePreviewVideo}>

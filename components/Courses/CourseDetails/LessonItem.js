@@ -8,8 +8,8 @@ const LessonItem = (props) => {
     return <div onClick={props.onLessonClicked} className={classes.chapterVideosContent} key={lesson.video_id}>
         <div className={classes.chapterVideoDetailsContainer}>
             <div className={classes.chapterTimingContainer}>
-                <Image src={"/time-black.png"} width={20} height={20} alt={""}></Image>
-                <span className={classes.chapterTimingMonths}>5:00 دقيقة</span>
+                <Image className={classes.chapterTimingIcon} src={"/time-black.png"} width={20} height={20} alt={""}></Image>
+                <h6 className={classes.chapterTimingMonths}>{lesson.duration} دقيقة</h6>
             </div>
         </div>
         <div className={classes.chapterVideoTitleContainer}>

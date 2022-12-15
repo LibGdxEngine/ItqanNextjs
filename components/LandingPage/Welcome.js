@@ -1,12 +1,12 @@
 import Link from "next/link";
-
+import classes from '../../styles/Home.module.css';
 const Welcome = (props) => {
   return <div>
       <div className="jumbotron jumbotron-fluid position-relative overlay-bottom"
            style={{marginBottom: '90px'}}>
           <div className="container text-center my-5 py-5">
-              <h1 className="text-white mt-4 mb-4">دورات متقنة من البداية حتى الاحتراف</h1>
-              <h1 className="text-white display-1 mb-5">أتقن مجالات البرمجة المختلفة</h1>
+              <h1 className="text-white mt-5 mb-5">دورات متقنة من البداية حتى الاحتراف</h1>
+              <h1 className="text-white display-3 mb-5">أتقن مجالات البرمجة المختلفة</h1>
               <div className="mx-auto mb-5" style={{width: '100%', maxWidth: '600px'}}>
                   <div className="input-group">
                       <div className="input-group-prepend">

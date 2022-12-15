@@ -13,20 +13,20 @@ const WhyChooseUs = (props) => {
                       <p style={{textAlign:'right'}} className="mb-4 pb-2">هناك العديد من الخيارات المتاحة لتعلم البرمجة وعلوم البيانات ولكن ليست كلها بنفس المستوى من الجودة.
                           يمكنك أن تسجل في دورات معهد إتقان وأنت مطمئن لأننا نقوم بشكل مستمر بتحديث جميع المعلومات الخاصة بالدورة وبمراقبة جودة ما يتم عرضه في موقعنا كما أننا نقوم بدعم جميع طلابنا بالعديد من المصادر والمراجع التي تساعدهم على التقدم واجتياز المراحل المختلفة</p>
 
-                      <div className="d-flex mb-3">
+                      <div className="d-flex mb-4">
                           <div className="btn-icon bg-primary mr-4">
                               <Image className="fa fa-2x fa-graduation-cap text-white" width={90} height={90} src="/gold-medal.png" alt="أفضل المعلمين"/>
                           </div>
-                          <div className="mt-n1">
+                          <div className="mt-n3">
                               <h4>لدينا أفضل المعلمين</h4>
                               <p>التعلم على يد أشخاص ذويي خبرة وكفائة يكسبك الثقة ويجعلك مطمئنا لما تتعلمه بقدر ما يجعلك مستعدا لمواجهة صعوبات العمل الحقيقية وبناء مشاريعك الخاصة بشكل أفضل </p>
                           </div>
                       </div>
-                      <div className="d-flex mb-3">
+                      <div className="d-flex mb-4">
                           <div className="btn-icon bg-secondary mr-4">
                               <Image alt="students Image" src="/collaboration.png" width={90} height={90} className="fa fa-2x fa-certificate text-white"/>
                           </div>
-                          <div className="mt-n1">
+                          <div className="mt-n3">
                               <h4>اختبارات دورية ومتابعة مستمرة مع الطلاب</h4>
                               <p> لن تكون وحدك خلال الرحلة. فريق متخصص سوف يتابع معك حل المشاكل ويساعدك على تجاوز العقبات . كما يمكنك مشاركة مشاريعك مع باقي الطلاب  </p>
                           </div>
@@ -35,7 +35,7 @@ const WhyChooseUs = (props) => {
                           <div className="btn-icon bg-warning mr-4">
                               <Image alt="شهادة معتمدة" width={90} height={90} className="fa fa-2x fa-book-reader text-white" src="/certificate.png" />
                           </div>
-                          <div className="mt-n1">
+                          <div className="mt-n2">
                               <h4>شهادات معتمدة من معهد اتقان</h4>
                               <p className="m-0">في نهاية كل دورة يمكنك الحصول على شهادة معتمدة تساعدك في بناء سيرتك الذاتية وتجعلك مميزا بين جميع المبرمجين حول العالم</p>
                           </div>

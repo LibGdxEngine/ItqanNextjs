@@ -1,16 +1,16 @@
 import classes from "./PreviewLessonItem.module.css";
 import Image from "next/image";
-import {useRouter} from "next/router";
+
 
 const PreviewLessonItem = (props) => {
     const lesson = props.lesson;
 
-    return <div onClick={props.onChapterItemClicked.bind(this, lesson.video_id)}
+    return <div onClick={props.onChapterItemClicked.bind(this, lesson)}
                 className={classes.chapterVideosContent} key={lesson.video_id}>
         <div className={classes.chapterVideoDetailsContainer}>
             <div className={classes.chapterTimingContainer}>
-                <Image src={"/time-black.png"} width={20} height={20} alt={""}></Image>
-                <span className={classes.chapterTimingMonths}>5:00 دقيقة</span>
+                <Image src={"/time-black.png"} width={18} height={18} alt={""}></Image>
+                <h6 className={classes.chapterTimingMonths}>{lesson.duration} دقيقة</h6>
             </div>
         </div>
         <div className={classes.chapterVideoTitleContainer}>

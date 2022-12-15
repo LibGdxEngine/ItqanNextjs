@@ -1,6 +1,7 @@
 
 .chapterItem{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,6 +36,7 @@
 }
 
 .chapterTitle{
+    direction: rtl;
     cursor: pointer;
     color: #525252;
     font-weight: 300;
@@ -44,7 +46,7 @@
 .chapterDetailsContainer{
     display: flex;
     align-items: center;
-    width: 20rem;
+    width: 24rem;
     /*background-color: red;*/
 }
 
@@ -52,11 +54,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
+    margin-right: 1rem;
 }
 
 .chapterTimingMonths{
-    margin-left: .2rem;
+    text-align: center;
+    direction: rtl;
+    margin-left: .3rem;
     font-size: 1.1rem;
     color: #777;
 }
@@ -83,6 +87,7 @@
         display: none;
     }
     .chapterTitle{
+
         font-size: .9rem;
     }
 

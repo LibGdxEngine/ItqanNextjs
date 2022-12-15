@@ -4,7 +4,7 @@ import {useCallback, useMemo, useState} from "react";
 import ChapterItem from "./ChapterItem";
 
 const ChaptersList = (props) => {
-    const courses = props.courses;
+    const courses = props.courses['sections'];
 
     return <div className={classes.chaptersList}>
         {courses.map((course, index) => {

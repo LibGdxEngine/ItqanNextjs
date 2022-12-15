@@ -7,7 +7,7 @@ const CourseDetails = (props) => {
     const courses = props.courses;
 
     return <div className={classes.container}>
-        <CourseDetailsHeader/>
+        <CourseDetailsHeader course={courses}/>
         <div className={classes.videosListContainer}>
             <div className={classes.contentTable}>
                 <p className={classes.contentParagraph}>محتويات الدورة</p>

@@ -3,18 +3,18 @@ import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import Image from "next/image";
 import {getSession} from "next-auth/react";
+import classes from '../styles/navbar.module.css';
+import LessonItem from "./Courses/CourseDetails/LessonItem";
 
 const NavBar = (props) => {
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
-    const router = useRouter();
-    const activeClassName = (path) => {
-        if (router.pathname === path) {
-            return "nav-item nav-link active";
-        }
-        return "nav-item nav-link";
-    }
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const [smallMenuClicked, setSmallMenuClicked] = useState(false);
+    const childHeight = `${5 * 100 / 16}rem`;
+    const line1Class = !smallMenuClicked ? classes.line1 : classes.line1Clicked;
+    const line2Class = !smallMenuClicked ? classes.line2 : classes.line2Clicked;
+    const line3Class = !smallMenuClicked ? classes.line3 : classes.line3Clicked;
 
     useEffect(() => {
         getSession().then(session => {
@@ -27,49 +27,63 @@ const NavBar = (props) => {
         })
     }, []);
 
-    function handleMenuClick() {
-        setMenuIsOpen(!menuIsOpen);
+
+    function handleOnClick() {
+        setSmallMenuClicked(!smallMenuClicked);
     }
 
-    return <div className="container-fluid p-0">
-        <nav className="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <Link href="#" className={"navbar-brand ml-lg-3"}>
-                <Image src={"/logo.svg"} width={75} height={75} className={"m-0 text-uppercase text-primary"} alt={""}></Image>
-
+    return <div className={classes.navbarContainer}>
+        <nav className={classes.navbar}>
+            <Link href="/" className={classes.navbarLogo}>
+                <Image className={classes.navbarLogoImage} src={"/logo.svg"} width={75} height={75} alt={""}></Image>
             </Link>
 
-            <button onClick={handleMenuClick} type="button" className="navbar-toggler" data-toggle="collapse"
-                    data-target="#navbarCollapse">
-                <span className="navbar-toggler-icon"></span>
-            </button>
+            <div className={classes.navbarItemsContainer}>
 
-            {menuIsOpen ?
-                <div className="navbar-collapse justify-content-between px-lg-3" id="navbarCollapse"
-                     onClick={handleMenuClick}>
-                    <div className="navbar-nav mx-auto py-0">
-                        <Link href="/" className={activeClassName('/')}>الرئيسية</Link>
-                        <Link href="/courses" className={activeClassName('/courses')}>تعلم معنا</Link>
-                        <Link href="/admin" className="nav-item nav-link">تعرف علينا</Link>
-                        <Link href="#" className="nav-item nav-link">تواصل معنا</Link>
+                <div className={classes.navbarItems}>
+                    <Link href="/" className={classes.navbarItem}>الرئيسية</Link>
+                    <Link href="/courses" className={classes.navbarItem}>تعلم معنا</Link>
+                    {!isLoggedIn && <Link href="/login" className={classes.navbarItem}>تسجيل</Link>}
+                    {isLoggedIn && <Link href="/account" className={classes.navbarItem}>حسابي</Link>}
 
+                    <Link href="#" className={classes.navbarItem}>تواصل معنا</Link>
+
+                </div>
+                {!isLoggedIn && <Link href="/" className={classes.actionBtn}>قم بالتسجيل</Link>}
+                {isLoggedIn &&
+                    <Link href="#" className={classes.navbarLogo}>
+                        <Image className={classes.navbarAccountIcon} src={"/profile.png"} width={35} height={35}
+                               alt={""}></Image>
+                    </Link>}
+            </div>
+
+            <div className={classes.collapsedMenuContainer} onClick={handleOnClick}>
+                <label htmlFor="click">
+                    <div className={classes.menuIcon}>
+                        <div className={classes.line + " " + line1Class}></div>
+                        <div className={classes.line + " " + line2Class}></div>
+                        <div className={classes.line + " " + line3Class}></div>
                     </div>
-                    <Link href="" className="btn btn-primary py-2 px-4 d-none d-lg-block">قم بالتسجيل</Link>
-                </div>
-                : null}
-            <div className="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-
-                <div className="navbar-nav mx-auto py-0">
-                    <Link href="/" className={activeClassName('/')}>الرئيسية</Link>
-                    <Link href="/courses" className={activeClassName('/courses')}>تعلم معنا</Link>
-                    {!isLoggedIn && <Link href="/login" className="nav-item nav-link">تسجيل</Link>}
-                    {isLoggedIn && <Link href="/account" className="nav-item nav-link">حسابي</Link>}
-
-                    <Link href="#" className="nav-item nav-link">تواصل معنا</Link>
-
-                </div>
-                <Link href="" className="btn btn-primary py-2 px-4 d-none d-lg-block">قم بالتسجيل</Link>
+                </label>
             </div>
         </nav>
+        <div className={classes.collapse} style={{
+            maxHeight: smallMenuClicked ? childHeight : 0
+        }}>
+
+            <div>
+              <div className={classes.collapsedMenu} onClick={handleOnClick}>
+                  <Link href="/" className={classes.navbarItem}>الرئيسية</Link>
+                  <Link href="/courses" className={classes.navbarItem}>تعلم معنا</Link>
+                  {!isLoggedIn && <Link href="/login" className={classes.navbarItem}>تسجيل</Link>}
+                  {isLoggedIn && <Link href="/account" className={classes.navbarItem}>حسابي</Link>}
+
+                  <Link href="#" className={classes.navbarItem}>تواصل معنا</Link>
+              </div>
+            </div>
+
+
+        </div>
     </div>
 };
 

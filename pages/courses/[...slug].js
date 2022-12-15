@@ -6,16 +6,17 @@ import {getDsCourses} from "../../ds_courses_data";
 
 
 const SingleCourse = (props) => {
-
-    const courses = props.courses;
+    const courses = props.courses['sections'];
     let videosList = [];
     for (let i = 0; i < courses.length; i++) {
         videosList = videosList.concat(courses[i]);
     }
 
-    const [selectedVideo, setSelectedVideo] = useState(videosList[0].lessons[0].video_id)
+    const [selectedVideo, setSelectedVideo] = useState(videosList[0].lessons[0])
+
 
     function handleVideoItemClick(video) {
+        console.log(video)
         setSelectedVideo(video);
     }
 
@@ -23,10 +24,11 @@ const SingleCourse = (props) => {
         <div className={classes.courseVideoPlayerContainer}>
             <div className={classes.info}>
                 <iframe className={classes.videoPlayer}
-                        src={"https://drive.google.com/file/d/" + selectedVideo + "/preview"} width="640"
+                        src={"https://drive.google.com/file/d/" + selectedVideo['video_id'] + "/preview"} width="640"
                         height="480"
                         allowFullScreen={true}
                         allow="autoplay"></iframe>
+                <h1>{selectedVideo.title}</h1>
             </div>
         </div>
 
@@ -37,7 +39,6 @@ const SingleCourse = (props) => {
         </div>
 
     </div>
-    // return <SingleCoursePreview course={course}/>
 };
 
 

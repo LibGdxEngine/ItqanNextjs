@@ -14,18 +14,18 @@ const CoursesTopics = (props) => {
         <section className={classes.courseCardContainer}>
             <div>
                 <Link href="/courses/ai" className={classes.aicourseCard}>
-                    <h2 className={classes.courseCardHeading}>الذكاء الصناعي</h2>
+                    <h2 className={classes.courseCardHeading}>الذكاء الاصطناعي</h2>
                     <p className={classes.courseCardDesc}>يمكنك أن تصبح مهندس ذكاء صناعي أو عالم بيانات من خلال
                         دوراتنا </p>
                 </Link>
             </div>
 
-            <div>
-                <div href="#" className={classes.courseCard}>
-                    <h2 className={classes.courseCardHeading}>تطوير المواقع الالكترونية</h2>
-                    <p className={classes.courseCardDesc}>تعلم لغات البرمجة المختلفة وطريقة استخدامها لبناء موقعك </p>
-                </div>
-            </div>
+            {/*<div>*/}
+            {/*    <div href="#" className={classes.courseCard}>*/}
+            {/*        <h2 className={classes.courseCardHeading}>تطوير المواقع الالكترونية</h2>*/}
+            {/*        <p className={classes.courseCardDesc}>تعلم لغات البرمجة المختلفة وطريقة استخدامها لبناء موقعك </p>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
             <div>
                 <div href="#" className={classes.courseCard + " " + classes.courseCardWeb}>
@@ -34,13 +34,14 @@ const CoursesTopics = (props) => {
                         للهواتف الذكية</p>
                 </div>
             </div>
-            <div>
-                <div href="#" className={classes.courseCard + " " + classes.courseCardWeb}>
-                    <h2 className={classes.courseCardHeading}>تصميم الواجهات الأمامية</h2>
-                    <p className={classes.courseCardDesc}>يمكنك أن تبدأ رحلتلك لتصميم وتطوير الواجهات الرسومية
-                        للمواقع</p>
-                </div>
-            </div>
+
+            {/*<div>*/}
+            {/*    <div href="#" className={classes.courseCard + " " + classes.courseCardWeb}>*/}
+            {/*        <h2 className={classes.courseCardHeading}>تصميم الواجهات الأمامية</h2>*/}
+            {/*        <p className={classes.courseCardDesc}>يمكنك أن تبدأ رحلتلك لتصميم وتطوير الواجهات الرسومية*/}
+            {/*            للمواقع</p>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
             <div>
                 <Link href="/courses/ds" className={classes.courseCard + " " + classes.courseCardDigi}>
@@ -50,12 +51,12 @@ const CoursesTopics = (props) => {
                 </Link>
             </div>
 
-            <div>
-                <div href="#" className={classes.courseCard + " " + classes.courseCardDaona}>
-                    <h2 className={classes.courseCardHeading}>تصميم وتطوير الألعاب</h2>
-                    <p className={classes.courseCardDesc}>احترف مجال صناعة الألعاب ثنائية/ثلاثية الأبعاد</p>
-                </div>
-            </div>
+            {/*<div>*/}
+            {/*    <div href="#" className={classes.courseCard + " " + classes.courseCardDaona}>*/}
+            {/*        <h2 className={classes.courseCardHeading}>تصميم وتطوير الألعاب</h2>*/}
+            {/*        <p className={classes.courseCardDesc}>احترف مجال صناعة الألعاب ثنائية/ثلاثية الأبعاد</p>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
         </section>
     </div>

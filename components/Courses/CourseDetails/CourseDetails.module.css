@@ -52,6 +52,16 @@
         align-self: center;
     }
 
+    .videosListContainer{
+        box-shadow: 0rem .08rem .1rem #777;
+        top: -2rem;
+        position: relative;
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+        z-index: 10;
+    }
+
 }
 
 

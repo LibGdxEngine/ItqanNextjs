@@ -7,7 +7,6 @@ import classes from '../../styles/login.module.css';
 export default function Login() {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(true);
-    const [loadedSession, setLoadedSession] = useState();
 
     useEffect(() => {
         getSession().then(session => {

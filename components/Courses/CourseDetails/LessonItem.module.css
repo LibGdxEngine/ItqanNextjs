@@ -9,11 +9,20 @@
 }
 
 .chapterTimingContainer{
+    display: flex;
 
 }
 
 .chapterTimingMonths{
+    direction: rtl;
     margin-left: .2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.chapterTimingIcon{
+    margin-right: .5rem;
 }
 
 .chapterVideoDetailsContainer{
@@ -32,6 +41,7 @@
 
 
 .chapterVideoTitle{
+    direction: rtl;
     cursor: pointer;
     color: #777;
     font-weight: 300;
