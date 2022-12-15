@@ -4,11 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <meta charSet="utf-8"/>
-                <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-                <title>اتقان</title>
-                <meta name="description" content="هذا التطبيق خاص بموقع اتقان"/>
-                <link rel="icon" href="/favicon.ico"/>
+
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
                 <link

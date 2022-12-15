@@ -2,6 +2,7 @@ import classes from './CourseDetails.module.css';
 import Image from "next/image";
 import CourseDetailsHeader from "./CourseDetailsHeader";
 import ChaptersList from "./ChaptersList";
+import WhyChooseThisCourse from "./WhyChooseThisCourse";
 
 const CourseDetails = (props) => {
     const courses = props.courses;
@@ -15,6 +16,11 @@ const CourseDetails = (props) => {
                 <ChaptersList courses={courses}/>
             </div>
         </div>
+        <div className={classes.bottomSpace}>
+
+        </div>
+        <WhyChooseThisCourse />
+
         <div className={classes.bottomSpace}>
 
         </div>

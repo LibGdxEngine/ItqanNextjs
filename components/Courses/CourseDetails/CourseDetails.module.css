@@ -40,7 +40,7 @@
 }
 
 .bottomSpace{
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 800px) {
@@ -48,7 +48,7 @@
         align-self: center;
     }
     .contentTitle{
-        font-size: 3rem;
+        font-size: 2rem;
         align-self: center;
     }
 

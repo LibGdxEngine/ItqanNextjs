@@ -48,7 +48,7 @@ export default function OurInstructorsSlider() {
             <OwlCarousel items={3} nav={true} {...options}>
                 <div className="team-item">
                     <Image style={{objectFit:"cover"}} width={500} height={500}
-                           className="Image-fluid w-100" src="/me.jpeg" alt=""/>
+                           className="Image-fluid w-100" src="/me.png" alt=""/>
                         <div className="bg-light text-center p-4">
                             <h5 className="mb-3">أحمد فتحي</h5>
                             <p className="mb-2">مهندس ذكاء صناعي وعالم بيانات</p>

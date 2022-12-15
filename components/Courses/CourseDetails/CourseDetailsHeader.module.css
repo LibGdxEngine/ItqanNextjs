@@ -46,8 +46,8 @@
 
 .instructorImage {
     margin-bottom: 1rem;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
 }
 
@@ -175,7 +175,7 @@
 @media (max-width: 800px) {
     .courseTitle {
         line-height: 1.6;
-        font-size: 2.5rem;
+        font-size: 2.0rem;
     }
 
     .courseDescription {

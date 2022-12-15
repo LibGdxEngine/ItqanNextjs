@@ -44,7 +44,7 @@ const CoursesTopics = (props) => {
             {/*</div>*/}
 
             <div>
-                <Link href="/courses/ds" className={classes.courseCard + " " + classes.courseCardDigi}>
+                <Link href="#" className={classes.courseCard + " " + classes.courseCardDigi}>
                     <h2 className={classes.courseCardHeading}>الخوارزميات وهيكلة البيانات</h2>
                     <p className={classes.courseCardDesc}>تعلم جميع الخوارزميات المهمة لكل مهندسي البرمجيات</p>
 

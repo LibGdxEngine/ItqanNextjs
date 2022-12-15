@@ -31,7 +31,7 @@ const CourseDetailsHeader = (props) => {
             </p>
 
             <div className={classes.courseInstructorContainer}>
-                <Image className={classes.instructorImage} src={"/me.jpeg"} width={100} height={100}
+                <Image className={classes.instructorImage} src={"/me.png"} width={100} height={100}
                        alt={"img"}></Image>
                 <h6 className={classes.instructorName}>شرح/ {course.instructor}</h6>
             </div>
