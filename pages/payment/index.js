@@ -79,7 +79,7 @@ const Payment = (props) => {
 
         const payment_key_token = thirdJson.token;
         setToken(payment_key_token);
-    }, [token]);
+    }, []);
 
     useEffect(() => {
         fetchData().catch(console.error)

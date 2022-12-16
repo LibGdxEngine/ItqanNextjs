@@ -60,7 +60,9 @@
 }
 
 @media (max-width: 750px) {
-
+    .info h1{
+        display: none;
+    }
 
     .coursePreviewContainer{
         display: flex;
