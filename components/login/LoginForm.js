@@ -80,9 +80,10 @@ const LoginForm = (props) => {
 
             if(!result.error){
                 router.replace("/courses");
+                window.location.reload();
             }
         }
-        window.location.reload();
+
 
     }
 

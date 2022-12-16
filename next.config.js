@@ -1,7 +1,8 @@
 const webpack = require("webpack")
 const nextConfig = {
     env: {
-        NEXT_PUBLIC_SECRET: 'بسم_الله_الرحمن_الرحيم',
+        NEXT_PUBLIC_SECRET: '01cb3b57b8a334e3e5c0002ff2ad1057',
+        SECRET: '01cb3b57b8a334e3e5c0002ff2ad1057'
     },
     images: {
         unoptimized: true,
