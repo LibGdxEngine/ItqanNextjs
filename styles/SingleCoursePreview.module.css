@@ -57,6 +57,7 @@
     left: 2rem;
     width: 100%;
     top: 35rem;
+    display: none;
 }
 
 @media (max-width: 750px) {
