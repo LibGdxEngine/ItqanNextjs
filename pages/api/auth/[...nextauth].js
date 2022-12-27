@@ -18,7 +18,7 @@ export default NextAuth(
                 const firstKey = Object.keys(user)[0];
                 const passwordOk = await verifyPassword(credentials.password, user[firstKey].enteredHashPassword);
                 if (!passwordOk) {
-                    throw new Error("كلمة السر غير صحيحة ... حاول مجددا");
+                    throw new Error("اسم المستخدم او كلمة السر غير صحيحة ... حاول مجددا");
                 }
 
                 return {email: user[firstKey].email};

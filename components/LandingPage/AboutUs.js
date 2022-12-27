@@ -1,4 +1,4 @@
-
+import classes from '../../styles/Home.module.css';
 import CountUp from "react-countup";
 import Image from "next/image";
 
@@ -29,29 +29,29 @@ const AboutUs = (props) => {
                           <div className="col-3 px-0">
                               <div className="bg-success text-center p-4">
                                   <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={100} />
-                                  <h6 className="text-uppercase text-white">ـ<span
-                                      className="d-block">الدروس</span></h6>
+                                  <h6 className="text-uppercase text-white">ـ<p
+                                      className={classes.counterTag}>الدروس</p></h6>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-primary text-center p-4">
                                   <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={30} />
-                                  <h6 className="text-uppercase text-white">ـ<span
-                                      className="d-block">الاختبارات</span></h6>
+                                  <h6 className="text-uppercase text-white">ـ<p
+                                      className={classes.counterTag}>الاختبارات</p></h6>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-secondary text-center p-4">
                                   <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={4} />
-                                  <h6 className="text-uppercase text-white">ـ<span
-                                      className="d-block">المدرسين</span></h6>
+                                  <h6 className="text-uppercase text-white">ـ<p
+                                      className={classes.counterTag}>المدرسين</p></h6>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-warning text-center p-4">
                                   <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={1000} />
-                                  <h6 className="text-uppercase text-white">ـ<span
-                                      className="d-block">الطلاب</span></h6>
+                                  <h6 className="text-uppercase text-white">ـ<p
+                                      className={classes.counterTag}>الطلاب</p></h6>
                               </div>
                           </div>
                       </div>

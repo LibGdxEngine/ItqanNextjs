@@ -31,8 +31,9 @@
 }
 
 .desc {
+    margin: 2.5rem 2.5rem 2.5rem 2.5rem;
     width: 63%;
-    margin-right: 2.5rem;
+
     direction: rtl;
 }
 

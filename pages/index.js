@@ -20,7 +20,7 @@ export default function Home() {
 
                 <WhyChooseUs />
 
-                <FeaturedCourses />
+                {/*<FeaturedCourses />*/}
 
                 <OurInstructors />
 

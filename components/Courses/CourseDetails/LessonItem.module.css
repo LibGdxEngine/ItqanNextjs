@@ -55,6 +55,11 @@
 }
 
 @media (max-width: 800px) {
+
+    .chapterVideoTitleContainer{
+        width: 200px;
+    }
+
     .chapterTimingContainer{
         display: none;
     }

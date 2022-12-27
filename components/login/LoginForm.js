@@ -2,11 +2,12 @@ import classes from "./LoginForm.module.css";
 import {useRef, useState} from "react";
 import {signIn} from "next-auth/react";
 import {useRouter} from "next/router";
+import Modal from "../tools/Modal";
 
-async function createUser(email, password) {
+async function createUser(userName, email, password) {
     const response = await fetch("/api/auth/signup", {
         method: "POST",
-        body: JSON.stringify({email, password}),
+        body: JSON.stringify({userName, email, password}),
         headers: {
             "Content-Type": "application/json",
         },
@@ -15,7 +16,7 @@ async function createUser(email, password) {
     const data = await response.json();
 
     if (!response.ok) {
-        throw new Error(data.message || "something went wrong!");
+        throw new Error(data.message || "حصل خطأ ما!");
     }
     return data;
 }
@@ -23,6 +24,11 @@ async function createUser(email, password) {
 const LoginForm = (props) => {
     const router = useRouter();
     const [isSignUp, setIsSignUp] = useState(true);
+
+    const [showModal, setShowModal] = useState(false);
+    const [modalTitle, setModalTitle] = useState("تم بنجاح");
+    const [modalMessage, setModalMessage] = useState("بسم الله الرحمن الرحيم");
+
     const userNameInputRef = useRef();
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
@@ -63,10 +69,16 @@ const LoginForm = (props) => {
 
         if (isSignUp) {
             try {
-                const response = await createUser(enteredEmail, enteredPassword);
+                const response = await createUser(enteredUserName, enteredEmail, enteredPassword);
+                setShowModal(true);
+                setModalTitle("تم بنجاح");
+                setModalMessage(response.message);
                 console.log(response);
             } catch (e) {
                 console.log(e.message);
+                setModalTitle("خطأ");
+                setShowModal(true);
+                setModalMessage(e.message);
             }
 
         } else {
@@ -81,6 +93,10 @@ const LoginForm = (props) => {
             if(!result.error){
                 router.replace("/courses");
                 window.location.reload();
+            }else{
+                setShowModal(true);
+                setModalTitle("خطأ");
+                setModalMessage(result.error);
             }
         }
 
@@ -90,22 +106,22 @@ const LoginForm = (props) => {
     return <div className={classes.formContainer}>
         <div className={classes.formStructor}>
             <form onSubmit={submitHandler} className={signUpClass}>
-                <h2 onClick={handleSignupClick} className={classes.formTitle} id="signup"><span> أو </span>تسجيل حساب
+                <h2 onClick={handleSignupClick} className={classes.formTitle} id="signup">{!isSignUp && <span> أو </span>}تسجيل حساب
                     جديد
                 </h2>
                 <div className={classes.formHolder}>
-                    <input type="text" ref={userNameInputRef} required={true} className={classes.input}
-                           placeholder="الإسم"/>
-                    <input type="email" ref={emailInputRef} required={true} className={classes.input}
-                           placeholder="البريد الإلكتروني"/>
-                    <input type="password" ref={passwordInputRef} required={true} className={classes.input}
-                           placeholder="كلمة السر"/>
+                    <input  ref={userNameInputRef} required={false} className={classes.input}
+                           placeholder="الإسم" oninvalid="this.setCustomValidity('Username cannot be empty.')"/>
+                    <input  ref={emailInputRef} required={false} className={classes.input}
+                           placeholder="البريد الإلكتروني"  oninvalid="this.setCustomValidity('Username cannot be empty.')"/>
+                    <input type="password" ref={passwordInputRef} required={false} className={classes.input}
+                           placeholder="كلمة السر"  oninvalid="this.setCustomValidity('Username cannot be empty.')"/>
                 </div>
                 <button className={classes.submitBtn}>تسجيل</button>
             </form>
             <form onSubmit={submitHandler} className={loginClass}>
                 <div className={classes.center}>
-                    <h2 onClick={handleLoginClick} className={classes.formTitle} id="login"><span> أو </span>تسجيل
+                    <h2 onClick={handleLoginClick} className={classes.formTitle} id="login">{isSignUp && <span> أو </span>}تسجيل
                         الدخول
                     </h2>
                     <div className={classes.formHolder}>
@@ -118,6 +134,17 @@ const LoginForm = (props) => {
                 </div>
             </form>
         </div>
+        <Modal
+            onClose={() => {
+                setShowModal(false)
+                setModalMessage("")
+                setIsSignUp(false);
+            }}
+            title={modalTitle}
+            show={showModal}>
+
+            {modalMessage}
+        </Modal>
     </div>
 };
 

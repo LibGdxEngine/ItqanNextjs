@@ -1,8 +1,17 @@
 import classes from "./CoursesTopics.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import {useState} from "react";
+import VideoModal from "../../tools/VideoModal";
+import Modal from "../../tools/Modal";
 
 const CoursesTopics = (props) => {
+
+    const [showModal, setShowModal] = useState(false);
+    const [modalTitle, setModalTitle] = useState("قريبا ان شاء الله");
+
+
+
     return <div className={classes.topicsContainer}>
         <section className={classes.heroSection}>
             <div className={classes.heroInfo}>
@@ -28,7 +37,7 @@ const CoursesTopics = (props) => {
             {/*</div>*/}
 
             <div>
-                <div href="#" className={classes.courseCard + " " + classes.courseCardWeb}>
+                <div href=""  onClick={() => setShowModal(true)}  className={classes.courseCard + " " + classes.courseCardWeb}>
                     <h2 className={classes.courseCardHeading}>تطوير تطبيقات الهواتف</h2>
                     <p className={classes.courseCardDesc}> كل ما تريده من معلومات لتبدأ تطوير التطبيقات
                         للهواتف الذكية</p>
@@ -44,7 +53,7 @@ const CoursesTopics = (props) => {
             {/*</div>*/}
 
             <div>
-                <Link href="#" className={classes.courseCard + " " + classes.courseCardDigi}>
+                <Link href="" onClick={() => setShowModal(true)} className={classes.courseCard + " " + classes.courseCardDigi}>
                     <h2 className={classes.courseCardHeading}>الخوارزميات وهيكلة البيانات</h2>
                     <p className={classes.courseCardDesc}>تعلم جميع الخوارزميات المهمة لكل مهندسي البرمجيات</p>
 
@@ -59,6 +68,14 @@ const CoursesTopics = (props) => {
             {/*</div>*/}
 
         </section>
+        {showModal ? <Modal
+            onClose={() => {
+                setShowModal(false);
+            }}
+            title={modalTitle}
+            show={showModal}>
+            {"هذه الدورة غير متاحة بعد ولكن سيتم اصدارها قريبا ان شاء الله"}
+        </Modal> : null}
     </div>
 };
 

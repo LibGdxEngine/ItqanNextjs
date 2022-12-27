@@ -5,7 +5,7 @@ const WhyChooseThisCourse = (props) => {
     return <div className={classes.container}>
         <hr className={classes.line}/>
         <h1>التعريف بالدورة:</h1>
-        <p className={classes.desc}>
+        <div className={classes.desc}>
             دورة إتقان الذكاء الاصطناعي وعلوم البيانات مع أحمد فتحي هي دورة عملية باستخدام لغة الـPython - واحدة من أشهر لغات البرمجة.
             سوف يقوم أحمد بشرح جميع الأكواد على IPython وأيضا على Jupyter Notebook وسوف تجد نفسك متمكنا من لغة الـPython في فترة قصيرة. سوف تتعامل مع المكتبات الأساسية في لغة الـPython وبعض المكتبات الخارجية الأخرى.
 
@@ -23,10 +23,10 @@ const WhyChooseThisCourse = (props) => {
 
             <br/>
             <br/>
-            <h4>معلومات عن المدرب</h4>
+            <p>معلومات عن المدرب</p>
 
             <span className={classes.bold}>أحمد فتحي</span> مهندس برمجيات ومتخصص في علوم البيانات, عمل في العديد من الشركات الناشئة والعالمية وهو متخصص في لغات برمجية شهيرة مثل الـJava والـPython والـC# وغيرها من لغات البرمجة الحديثة.
-        </p>
+        </div>
 
 
         <h1>لمن هذه الدورة؟ </h1>
@@ -65,7 +65,7 @@ const WhyChooseThisCourse = (props) => {
         </ul>
 
         <h1>متطلبات الدورة:</h1>
-        <p className={classes.desc}> هذه الدورة لا تحتاج لأي متطلبات خاصة فهي مصممة لتناسب جميع المستويات من البداية تماما وحتى الإتقان بإذن الله</p>
+        <p className={""}> هذه الدورة لا تحتاج لأي متطلبات خاصة فهي مصممة لتناسب جميع المستويات من البداية تماما وحتى الإتقان بإذن الله</p>
         <p className={classes.desc}> يكفي فقط أن:</p>
         <ul className={classes.list}>
 

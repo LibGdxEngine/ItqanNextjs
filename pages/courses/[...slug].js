@@ -24,8 +24,8 @@ const SingleCourse = (props) => {
         <div className={classes.courseVideoPlayerContainer}>
             <div className={classes.info}>
                 <iframe className={classes.videoPlayer}
-                        src={"https://drive.google.com/file/d/" + selectedVideo['video_id'] + "/preview"} width="640"
-                        height="480"
+                        src={"https://drive.google.com/file/d/" + selectedVideo['video_id'] + "/preview"}
+
                         allowFullScreen={true}
                         allow="autoplay"></iframe>
                 <h1>{selectedVideo.title}</h1>

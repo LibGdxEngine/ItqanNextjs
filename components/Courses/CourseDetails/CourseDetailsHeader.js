@@ -3,11 +3,16 @@ import Image from "next/image";
 import {getSession, useSession} from "next-auth/react";
 import Link from "next/link";
 import {useEffect, useState} from "react";
+import Modal from "../../tools/Modal";
+import VideoModal from "../../tools/VideoModal";
 
 
 const CourseDetailsHeader = (props) => {
     const {data: session, status} = useSession();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const [showModal, setShowModal] = useState(false);
+    const [modalTitle, setModalTitle] = useState("مقدمة الدورة");
 
     const course = props.course;
 
@@ -42,12 +47,12 @@ const CourseDetailsHeader = (props) => {
 
             <div className={classes.courseActions}>
                 <div className={classes.coursePreviewVideo}>
-                    <div className={classes.c1}>
+                    <div onClick={() => setShowModal(true)} className={classes.c1}>
                         <div className={classes.c2}>
                             <Image src={"/icons8-circled-play-100.png"} width={35} height={35} alt={"2"}></Image>
                         </div>
                     </div>
-                    <h6 className={classes.coursePreviewTitle}>مقدمة الدورة</h6>
+                    <h6  className={classes.coursePreviewTitle}>مقدمة الدورة</h6>
                 </div>
 
                 <div className={classes.courseTiming}>
@@ -73,6 +78,23 @@ const CourseDetailsHeader = (props) => {
                 </div>
             </div>
         </div>
+        {showModal ? <VideoModal
+            onClose={() => {
+                setShowModal(false);
+                setModalTitle("");
+            }}
+            title={modalTitle}
+            show={showModal}>
+            <div className={classes.courseVideoPlayerContainer}>
+                <div className={classes.info}>
+                    <iframe className={classes.videoPlayer}
+                            src={"https://drive.google.com/file/d/" + "1AETv0996kMRsRR0DFMJZ_UxvwULl7N__" + "/preview"}
+                            allowFullScreen={true}
+                            allow="autoplay"></iframe>
+                </div>
+            </div>
+        </VideoModal> : null}
+
     </div>
 };
 

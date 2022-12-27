@@ -3,10 +3,12 @@ import {useEffect, useState} from "react";
 import {getSession} from "next-auth/react";
 import {useRouter} from "next/router";
 import classes from '../../styles/login.module.css';
+import Modal from "../../components/tools/Modal";
 
 export default function Login() {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(true);
+
 
     useEffect(() => {
         getSession().then(session => {
