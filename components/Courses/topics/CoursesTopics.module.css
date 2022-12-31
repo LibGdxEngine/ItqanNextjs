@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    padding: 1rem;
+    margin: .5rem;
     color: #fff;
     background: url(https://svgshare.com/i/KcP.svg) no-repeat bottom 20px right 20px,
     linear-gradient(241.95deg, #244fa3 0%, #2590a7 100%);
@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    padding: 1rem;
+    margin: .5rem;
     color: #fff;
     background: url(https://svgshare.com/i/KcP.svg) no-repeat bottom 20px right 20px,
     linear-gradient(241.95deg, #244fa3 0%, #2590a7 100%);

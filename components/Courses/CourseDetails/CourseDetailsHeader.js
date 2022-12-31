@@ -78,7 +78,7 @@ const CourseDetailsHeader = (props) => {
                 </div>
             </div>
         </div>
-        {showModal ? <VideoModal
+        <VideoModal
             onClose={() => {
                 setShowModal(false);
                 setModalTitle("");
@@ -93,7 +93,7 @@ const CourseDetailsHeader = (props) => {
                             allow="autoplay"></iframe>
                 </div>
             </div>
-        </VideoModal> : null}
+        </VideoModal>
 
     </div>
 };

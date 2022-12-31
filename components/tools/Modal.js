@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import Image from "next/image";
 
 const Modal = ({ show, onClose, children, title }) => {
     const [isBrowser, setIsBrowser] = useState(false);
@@ -18,9 +19,9 @@ const Modal = ({ show, onClose, children, title }) => {
         <StyledModalOverlay>
             <StyledModal>
                 <StyledModalHeader>
-                    <a href="#" onClick={handleCloseClick}>
-                        x
-                    </a>
+                    <div onClick={handleCloseClick}>
+                        <Image src={"./close_icon.png"} alt={"اغلاق"} width={30} height={30}/>
+                    </div>
                 </StyledModalHeader>
                 {title && <StyledModalTitle>{title}</StyledModalTitle>}
                 <StyledModalBody>{children}</StyledModalBody>

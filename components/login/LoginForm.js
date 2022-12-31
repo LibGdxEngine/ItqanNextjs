@@ -111,7 +111,7 @@ const LoginForm = (props) => {
                 </h2>
                 <div className={classes.formHolder}>
                     <input  ref={userNameInputRef} required={false} className={classes.input}
-                           placeholder="الإسم" oninvalid="this.setCustomValidity('Username cannot be empty.')"/>
+                           placeholder="الإسم" onInvalid="this.setCustomValidity('Username cannot be empty.')"/>
                     <input  ref={emailInputRef} required={false} className={classes.input}
                            placeholder="البريد الإلكتروني"  oninvalid="this.setCustomValidity('Username cannot be empty.')"/>
                     <input type="password" ref={passwordInputRef} required={false} className={classes.input}

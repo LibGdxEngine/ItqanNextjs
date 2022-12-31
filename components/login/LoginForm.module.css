@@ -21,7 +21,7 @@
 }
 .formStructor::after {
     content: "";
-    opacity: 0.8;
+    opacity: 0.7;
     position: absolute;
     top: 0;
     right: 0;

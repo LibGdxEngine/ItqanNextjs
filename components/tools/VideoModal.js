@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import Image from "next/image";
 
-const Modal = ({ show, onClose, children, title }) => {
+const Modal = ({show, onClose, children, title}) => {
     const [isBrowser, setIsBrowser] = useState(false);
 
     useEffect(() => {
@@ -18,9 +19,9 @@ const Modal = ({ show, onClose, children, title }) => {
         <StyledModalOverlay>
             <StyledModal>
                 <StyledModalHeader>
-                    <a href="#" onClick={handleCloseClick}>
-                        x
-                    </a>
+                    <div style={{cursor:"pointer"}} onClick={handleCloseClick}>
+                        إغلاق
+                    </div>
                 </StyledModalHeader>
                 {title && <StyledModalTitle>{title}</StyledModalTitle>}
                 <StyledModalBody>{children}</StyledModalBody>
@@ -41,7 +42,7 @@ const Modal = ({ show, onClose, children, title }) => {
 
 const StyledModalTitle = styled.h2`
   color: #777;
-  
+
   display: flex;
   justify-content: center;
 `;
@@ -66,9 +67,8 @@ const StyledModal = styled.div`
   border-radius: 15px;
   padding: 15px;
   @media (max-width: 768px) {
-
     width: 90vw;
-    height: 60%;
+    height: 65%;
   }
 `;
 const StyledModalOverlay = styled.div`

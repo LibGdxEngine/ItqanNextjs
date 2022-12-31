@@ -51,8 +51,8 @@ export default function FeaturedCoursesSlider() {
         <div className="container-fluid px-0 py-5">
             <OwlCarousel className="courses-carousel" {...options}>
                 <div style={{height: "500px"}} className="courses-item position-relative">
-                    <Image width={500} height={500} className="Image-fluid"
-                           src="/ai_course.jpg" alt=""/>
+                    <Image style={{objectFit:"contain"}} width={500} height={500} className="Image-fluid"
+                           src="/python_course.png" alt=""/>
                     <div className="courses-text">
                         <h4 className="text-center text-white px-3" style={{direction: 'rtl'}}>الذكاء الصناعي وعلوم
                             البيانات باستخدام لغة البايثون</h4>

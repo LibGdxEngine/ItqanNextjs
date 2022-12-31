@@ -1,12 +1,12 @@
 import FeaturedCoursesSlider from "./FeaturedCoursesSlider";
 
-const FeaturedCourses = (props) => {
+const   FeaturedCourses = (props) => {
     return <div className="container-fluid px-0 py-5">
         <div className="row mx-0 justify-content-center pt-5">
             <div className="col-lg-6">
                 <div className="section-title text-center position-relative mb-4">
                     <h6 className="d-inline-block position-relative text-secondary text-uppercase pb-2">الدورات المميزة</h6>
-                    <h1 className="display-4">تفقد دوراتنا المميزة التي قمنا بصناعتها خصيصا من أجلك</h1>
+                    <h2 style={{lineHeight:"4rem"}} className="display-5">يمكنك حجز و حضور الدورات الخصوصية أونلاين أو في المراكز المعتمدة لدينا</h2>
                 </div>
             </div>
         </div>
@@ -29,6 +29,18 @@ const FeaturedCourses = (props) => {
                                 <div className="form-group">
                                     <input type="email" className="form-control bg-light border-0"
                                            placeholder="بريدك الالكتروني" style={{padding: '30px 20px'}}/>
+                                </div>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="form-group">
+                                    <input type="tel" className="form-control bg-light border-0"
+                                           placeholder="رقم هاتفك" style={{padding: '30px 20px'}}/>
+                                </div>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="form-group">
+                                    <input type="text" className="form-control bg-light border-0"
+                                           placeholder="وظيفتك أو مجال دراستك" style={{padding: '30px 20px'}}/>
                                 </div>
                             </div>
                         </div>

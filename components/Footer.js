@@ -12,7 +12,9 @@ const Footer = (props) => {
                   className="fa fa-book-reader mr-3"></i>إتقان</h1>
             </a>
             <p className="m-0">معهد إتقان هو مشروع يهدف إلى نشر العلوم باللغة العربية وخاصة علوم البرمجة والذكاء الصناعي وعلوم البيانات .  و
-              سنحاول ان شاء الله أن نثري المحتوى العربي بأكبر عدد من الدورات ذات الجودة العالية التي تجعل تعلم هذه العلوم أسهل بالنسبة للفرد المسلم الذي يريد اكتساب صنعة البرمجة لكي يستفيد منها في حياته الدينية أو الدنيوية </p>
+              سنحاول ان شاء الله أن نثري المحتوى العربي بأكبر عدد من الدورات ذات الجودة العالية التي تجعل تعلم هذه العلوم أسهل بالنسبة للفرد المسلم الذي يريد اكتساب صنعة البرمجة لكي يستفيد منها في حياته الدينية أو الدنيوية
+
+            </p>
           </div>
           <div className="col-md-6 mb-5">
             <h3 className="text-white mb-4">تابع أخبار المعهد</h3>
@@ -44,15 +46,15 @@ const Footer = (props) => {
           <div className="col-md-4 mb-5">
             <h3 className="text-white mb-4">دوراتنا المميزة</h3>
             <div className="d-flex flex-column justify-content-start">
-              <a className="text-white-50 mb-2" href="#"><i
+              <a className="text-white-50 mb-2" href="courses/ai"><i
                   className="fa fa-angle-right mr-2"></i>الذكاء الصناعي وعلوم البيانات</a>
-              <a className="text-white-50 mb-2" href="#"><i
-                  className="fa fa-angle-right mr-2"></i>تطوير التطبيقات</a>
-              <a className="text-white-50 mb-2" href="#"><i
-                  className="fa fa-angle-right mr-2"></i>الخوارزميات وهيكلة البيانات</a>
-              <a className="text-white-50 mb-2" href="#"><i
-                  className="fa fa-angle-right mr-2"></i>الرؤية الحاسوبية</a>
-              <a className="text-white-50" href="#"><i className="fa fa-angle-right mr-2"></i>تطوير الألعاب</a>
+              {/*<a className="text-white-50 mb-2" href="#"><i*/}
+              {/*    className="fa fa-angle-right mr-2"></i>تطوير التطبيقات</a>*/}
+              {/*<a className="text-white-50 mb-2" href="#"><i*/}
+              {/*    className="fa fa-angle-right mr-2"></i>الخوارزميات وهيكلة البيانات</a>*/}
+              {/*<a className="text-white-50 mb-2" href="#"><i*/}
+              {/*    className="fa fa-angle-right mr-2"></i>الرؤية الحاسوبية</a>*/}
+              {/*<a className="text-white-50" href="#"><i className="fa fa-angle-right mr-2"></i>تطوير الألعاب</a>*/}
             </div>
           </div>
           {/*<div className="col-md-4 mb-5">*/}

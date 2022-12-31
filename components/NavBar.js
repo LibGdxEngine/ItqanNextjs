@@ -43,15 +43,13 @@ const NavBar = (props) => {
                 <div className={classes.navbarItems}>
                     <Link href="/" className={classes.navbarItem}>الرئيسية</Link>
                     <Link href="/courses" className={classes.navbarItem}>تعلم معنا</Link>
-                    {!isLoggedIn && <Link href="/login" className={classes.navbarItem}>تسجيل</Link>}
-                    {isLoggedIn && <Link href="/account" className={classes.navbarItem}>حسابي</Link>}
-
-                    <Link href="#" className={classes.navbarItem}>تواصل معنا</Link>
+                    {/*<Link href="/private_courses" className={classes.navbarItem}>الدورات الخصوصية</Link>*/}
+                    <Link href="/about" className={classes.navbarItem}>من نحن</Link>
 
                 </div>
-                {!isLoggedIn && <Link href="/" className={classes.actionBtn}>قم بالتسجيل</Link>}
+                {!isLoggedIn && <Link href="/login" className={classes.actionBtn}>قم بالتسجيل</Link>}
                 {isLoggedIn &&
-                    <Link href="#" className={classes.navbarLogo}>
+                    <Link href="/account" className={classes.navbarLogo}>
                         <Image className={classes.navbarAccountIcon} src={"/profile.png"} width={35} height={35}
                                alt={""}></Image>
                     </Link>}
@@ -67,6 +65,8 @@ const NavBar = (props) => {
                 </label>
             </div>
         </nav>
+
+        {/* Collapsed Menu */}
         <div className={classes.collapse} style={{
             maxHeight: smallMenuClicked ? childHeight : 0
         }}>
@@ -75,13 +75,14 @@ const NavBar = (props) => {
               <div className={classes.collapsedMenu} onClick={handleOnClick}>
                   <Link href="/" className={classes.navbarItem}>الرئيسية</Link>
                   <Link href="/courses" className={classes.navbarItem}>تعلم معنا</Link>
-                  {!isLoggedIn && <Link href="/login" className={classes.navbarItem}>تسجيل</Link>}
-                  {isLoggedIn && <Link href="/account" className={classes.navbarItem}>حسابي</Link>}
+                  {/*<Link href="/private_courses" className={classes.navbarItem}>الدورات الخصوصية</Link>*/}
+                  <Link href="/about" className={classes.navbarItem}>من نحن</Link>
 
-                  <Link href="#" className={classes.navbarItem}>تواصل معنا</Link>
+                  {!isLoggedIn && <Link href="/login" className={classes.navbarItem + " " + classes.actionBtn}>تسجيل</Link>}
+                  {isLoggedIn && <Link href="/account" className={classes.navbarItem + " " + classes.actionBtn}>حسابي</Link>}
+
               </div>
             </div>
-
 
         </div>
     </div>
