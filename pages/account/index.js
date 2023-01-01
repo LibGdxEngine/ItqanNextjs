@@ -1,5 +1,6 @@
 import {useSession, getSession, signOut} from "next-auth/react";
 import {useEffect, useState} from "react";
+import classes from "../../styles/navbar.module.css";
 
 const Account = (props) => {
 
@@ -7,8 +8,9 @@ const Account = (props) => {
         signOut();
     }
 
-    return <div>
-        <button onClick={logoutHandler}>تسجيل الخروج</button>
+    return <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center",margin:"8rem"}}>
+        <h2>حسابك الشخصي</h2>
+        <button style={{marginTop:"2rem"}} className={classes.actionBtn} onClick={logoutHandler}>تسجيل الخروج</button>
     </div>
 };
 

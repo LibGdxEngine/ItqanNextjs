@@ -3,15 +3,17 @@ import CountUp from "react-countup";
 import Image from "next/image";
 
 const AboutUs = (props) => {
+
+
   return <div >
       <div className="container-fluid py-5">
           <div className="container py-5">
               <div className="row">
                   <div className="col-lg-5 mb-5 mb-lg-0" style={{minHeight: '500px'}}>
                       <div className="position-relative h-100">
-                          <Image className="position-absolute w-100 h-100" width={900} height={900}
+                          <Image className="position-absolute w-100 h-100" width={800} height={800}
                                  src="/aboutus.jpg" alt="sss"
-                                 style={{objectFit: 'cover'}}/>
+                                 style={{objectFit: 'contain'}}/>
                       </div>
                   </div>
                   <div className="col-lg-7" style={{textAlign:'right'}}>
@@ -28,28 +30,28 @@ const AboutUs = (props) => {
                       <div className="row pt-4 mx-0">
                           <div className="col-3 px-0">
                               <div className="bg-success text-center p-4">
-                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={100} />
+                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={48} />
                                   <h6 className="text-uppercase text-white">ـ<p
                                       className={classes.counterTag}>الدروس</p></h6>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-primary text-center p-4">
-                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={30} />
+                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={24} />
                                   <h6 className="text-uppercase text-white">ـ<p
                                       className={classes.counterTag}>الاختبارات</p></h6>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-secondary text-center p-4">
-                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={4} />
+                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={5} />
                                   <h6 className="text-uppercase text-white">ـ<p
                                       className={classes.counterTag}>المدرسين</p></h6>
                               </div>
                           </div>
                           <div className="col-3 px-0">
                               <div className="bg-warning text-center p-4">
-                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={1000} />
+                                  <CountUp style={{fontSize:'1.2rem', fontWeight:'bold'}} className="text-white" data-toggle="counter-up" end={0} />
                                   <h6 className="text-uppercase text-white">ـ<p
                                       className={classes.counterTag}>الطلاب</p></h6>
                               </div>

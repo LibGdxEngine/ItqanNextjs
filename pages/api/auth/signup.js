@@ -18,17 +18,16 @@ async function handler(req, res) {
             return;
         }
         const enteredHashPassword = await hashPassword(password);
+        let myCourses = [""];
         try {
-
             const response = await fetch("https://itqan-32c83-default-rtdb.firebaseio.com/users.json", {
                 method: "POST",
-                body: JSON.stringify({userName, email, enteredHashPassword}),
+                body: JSON.stringify({userName, email, enteredHashPassword, myCourses}),
                 headers: {
                     "Content-Type": "application/json"
                 }
             });
             const data = await response.json();
-            console.log(data);
         } catch (e) {
             res.status(404).json({message: "" + e.message});
         }

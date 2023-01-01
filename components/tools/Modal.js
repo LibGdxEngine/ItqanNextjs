@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Image from "next/image";
+import cloneImage from '../../public/close_icon.png';
 
 const Modal = ({ show, onClose, children, title }) => {
     const [isBrowser, setIsBrowser] = useState(false);
@@ -19,8 +20,8 @@ const Modal = ({ show, onClose, children, title }) => {
         <StyledModalOverlay>
             <StyledModal>
                 <StyledModalHeader>
-                    <div onClick={handleCloseClick}>
-                        <Image src={"./close_icon.png"} alt={"اغلاق"} width={30} height={30}/>
+                    <div style={{cursor: "pointer"}} onClick={handleCloseClick}>
+                        <Image src={cloneImage} alt={"اغلاق"} width={30} height={30}/>
                     </div>
                 </StyledModalHeader>
                 {title && <StyledModalTitle>{title}</StyledModalTitle>}
@@ -42,9 +43,9 @@ const Modal = ({ show, onClose, children, title }) => {
 
 const StyledModalTitle = styled.h2`
   color: #777;
-  
+  direction: rtl;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 `;
 
 const StyledModalBody = styled.div`
@@ -60,15 +61,18 @@ const StyledModalHeader = styled.div`
 `;
 
 const StyledModal = styled.div`
+  z-index: 1;
+  position: fixed;
   background: white;
-  width: 500px;
-  height: 200px;
+  width: 550px;
+  height: auto;
   border-radius: 15px;
-  padding: 15px;
+  padding: 30px;
 `;
 const StyledModalOverlay = styled.div`
+  position: fixed;
   z-index: 100;
-  position: absolute;
+  //position: absolute;
   top: 0;
   left: 0;
   width: 100%;

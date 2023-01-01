@@ -19,7 +19,7 @@ const CourseDetails = (props) => {
         <div className={classes.bottomSpace}>
 
         </div>
-        <WhyChooseThisCourse />
+        <WhyChooseThisCourse course={courses} />
 
         <div className={classes.bottomSpace}>
 

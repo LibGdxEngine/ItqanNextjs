@@ -2,7 +2,90 @@ const AI_DATA = {
     title: "إتقان الذكاء الاصطناعي وعلوم البيانات",
     description: "إن الذكاء الاصطناعي لا يقتصر على المهندسين فقط. إذا أردت أن تصبح أفضل في مجال استخدام الذكاء الاصطناعي، فإن هذه هي الدورة التدريبية المناسبة لك",
     instructor: "أحمد فتحي",
+    instructorImage: "/me.png",
+    numOfHours: "12",
+    numOfVideos: "66",
+    numOfMonthsToComplete: "3",
+    paymentLink: "https://paymes.shop/alashtrak-fy-dor-althkaaa-alastnaaay-lmaahd-atkan-234260637?p=link",
+    introVideoId: "1AETv0996kMRsRR0DFMJZ_UxvwULl7N__",
+    courseIntroText: `
+                دورة إتقان الذكاء الاصطناعي وعلوم البيانات مع أحمد فتحي هي دورة عملية باستخدام لغة الـPython - واحدة من أشهر لغات البرمجة.
+            سوف يقوم أحمد بشرح جميع الأكواد على IPython وأيضا على Jupyter Notebook وسوف تجد نفسك متمكنا من لغة الـPython في فترة قصيرة. سوف تتعامل مع المكتبات الأساسية في لغة الـPython وبعض المكتبات الخارجية الأخرى.
 
+            <br/>
+
+            في مقدمة مقاطع الفيديو الخاصة بعلوم البيانات ، يضع أحمد الأساس للدروس اللاحقة التي سيقدم فيها بعضًا من تقنيات الحوسبة المتطورة الأكثر تطورا اليوم ، بما في ذلك معالجة اللغات - NLP واستخراج البيانات - Data Mining والحوسبة المعرفية باستخدام IBM ® Watson
+
+            <br/>
+
+            سنتعرض أيضا للتعلم الآلي الخاضع للإشراف والتعلم الآلي غير الخاضع للإشراف ورؤية الكمبيوتر من خلال التعلم العميق وتحليل المشاعر من خلال التعلم العميق مع الشبكات العصبية المتكررة ، والبيانات الضخمة باستخدام Hadoop® ، وتدفق Spark ™ ، وقواعد بيانات NoSQL وإنترنت الأشياء IoT.
+
+            <br/>
+
+            قم بتنزيل أمثلة التعليمات البرمجية لهذه الدورة من <a href="https://github.com/LibGdxEngine/Python-Fundamentals">https://github.com/LibGdxEngine/Python-Fundamentals</a>. سيتم تحديث هذا المستودع بأمثلة الدروس الإضافية عند اكتمال الدروس
+
+            <br/>
+            <br/>
+            <p>معلومات عن المدرب</p>
+
+            <span>أحمد فتحي</span> مهندس برمجيات ومتخصص في علوم البيانات, عمل في العديد من الشركات الناشئة والعالمية وهو متخصص في لغات برمجية شهيرة مثل الـJava والـPython والـC# وغيرها من لغات البرمجة الحديثة.
+             <h1>لمن هذه الدورة؟ </h1>
+            <p className={classes.desc}> هذه الدورة المكثفة في مجال علوم البيانات والذكاء الاصطناعي تستهدف الفئات
+                التالية:</p>
+            <ul className={classes.list}>
+    
+    
+                <li className={classes.listItem}>
+                    <div className={classes.listItemContent}>
+                        <p>كل من لديه شغف لتعلم الذكاء الإصطناعي وعلوم البيانات</p>
+                        
+                    </div>
+                </li>
+    
+                <li className={classes.listItem}>
+                    <div className={classes.listItemContent}>
+                        <p>طلبة كليات الهندسة وعلوم الحاسب والذكاء الاصطناعي</p>
+                        
+                    </div>
+                </li>
+    
+                <li className={classes.listItem}>
+                    <div className={classes.listItemContent}>
+                        <p>طلبة الكليات الحسابية والعلوم الرياضية والتجارة</p>
+                        
+                    </div>
+                </li>
+    
+                <li className={classes.listItem}>
+                    <div className={classes.listItemContent}>
+                        <p>المطورين الذين يريدون تعلم الذكاء الإصطناعي لتعزيز خبراتهم</p>
+                        
+                    </div>
+                </li>
+    
+            </ul>
+    
+            <h1>متطلبات الدورة:</h1>
+            <p className={classes.desc}> هذه الدورة لا تحتاج لأي متطلبات خاصة فهي مصممة لتناسب جميع المستويات من البداية
+                تماما وحتى الإتقان بإذن الله</p>
+            <p className={classes.desc}> يكفي فقط أن:</p>
+            <ul className={classes.list}>
+    
+                <li className={classes.listItem}>
+                    <div className={classes.listItemContent}>
+                        <p>تستعين بالله وتعلم أنه لا طاقة لك بشيء إلا بحول الله وقوته</p>
+                        
+                    </div>
+                </li>
+    
+                <li className={classes.listItem}>
+                    <div className={classes.listItemContent}>
+                        <p>تحل جميع الاختبارات أولا بأول</p>
+                        
+                    </div>
+                </li>
+            </ul>
+    `,
     sections: [
         {
             "id": "1",

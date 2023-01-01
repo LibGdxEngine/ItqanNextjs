@@ -45,6 +45,7 @@ const NavBar = (props) => {
                     <Link href="/courses" className={classes.navbarItem}>تعلم معنا</Link>
                     {/*<Link href="/private_courses" className={classes.navbarItem}>الدورات الخصوصية</Link>*/}
                     <Link href="/about" className={classes.navbarItem}>من نحن</Link>
+                    <Link href="/contactus" className={classes.navbarItem}>تواصل معنا</Link>
 
                 </div>
                 {!isLoggedIn && <Link href="/login" className={classes.actionBtn}>قم بالتسجيل</Link>}
@@ -77,6 +78,7 @@ const NavBar = (props) => {
                   <Link href="/courses" className={classes.navbarItem}>تعلم معنا</Link>
                   {/*<Link href="/private_courses" className={classes.navbarItem}>الدورات الخصوصية</Link>*/}
                   <Link href="/about" className={classes.navbarItem}>من نحن</Link>
+                  <Link href="/contactus" className={classes.navbarItem}>تواصل معنا</Link>
 
                   {!isLoggedIn && <Link href="/login" className={classes.navbarItem + " " + classes.actionBtn}>تسجيل</Link>}
                   {isLoggedIn && <Link href="/account" className={classes.navbarItem + " " + classes.actionBtn}>حسابي</Link>}
