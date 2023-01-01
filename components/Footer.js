@@ -2,6 +2,8 @@ import {Fragment, useRef, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Modal from "./tools/Modal";
+import facebookIcon from '../public/facebook.png';
+import linkedinIcon from '../public/linkedin.png';
 
 const Footer = (props) => {
     const [showModal, setShowModal] = useState(false);
@@ -74,8 +76,8 @@ const Footer = (props) => {
                         <p><i className="fa fa-phone-alt mr-2"></i>+02 0101 98 67 911</p>
                         {/*<p><i className="fa fa-envelope mr-2"></i>info@example.com</p>*/}
                         <div className="d-flex justify-content-start mt-4">
-                            <a className="text-white mr-4" href="#"><Image src={"./facebook.png"} alt={""} width={30} height={30} /></a>
-                            <a className="text-white mr-4" href="#"><Image src={"./linkedin.png"} alt={""} width={30} height={30} /></a>
+                            <a className="text-white mr-4" href="#"><Image src={facebookIcon} alt={""} width={30} height={30} /></a>
+                            <a className="text-white mr-4" href="#"><Image src={linkedinIcon} alt={""} width={30} height={30} /></a>
                             <a className="text-white mr-4" href="#"><Image src={"./facebook.png"} alt={""} width={30} height={30} /></a>
                             <a className="text-white" href="#"><i className="fab fa-2x fa-instagram"></i></a>
                         </div>

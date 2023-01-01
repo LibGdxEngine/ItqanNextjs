@@ -61,10 +61,11 @@ const StyledModalHeader = styled.div`
 `;
 
 const StyledModal = styled.div`
-  z-index: 1;
+  z-index: 101;
   position: fixed;
   background: white;
-  width: 550px;
+  margin: 2rem;
+  width: auto;
   height: auto;
   border-radius: 15px;
   padding: 30px;
