@@ -43,7 +43,7 @@ const Modal = ({show, onClose, children, title}) => {
 
 const StyledModalTitle = styled.h2`
   color: #777;
-
+  direction: rtl;
   display: flex;
   justify-content: center;
 `;

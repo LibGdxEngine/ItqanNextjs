@@ -1,8 +1,11 @@
 import classes from "./ChapterItem.module.css";
 import Image from "next/image";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import LessonItem from "./LessonItem";
 import {useRouter} from "next/router";
+import {getSession, useSession} from "next-auth/react";
+import VideoModal from "../../tools/VideoModal";
+
 
 const ChapterItem = (props) => {
 
@@ -10,12 +13,18 @@ const ChapterItem = (props) => {
     const childHeight = `${course.lessons.length * 100 / 16}rem`;
     const [itemIsOpened, setItemIsOpened] = useState(false);
 
+    const [showModal, setShowModal] = useState(false);
+    const [modalTitle, setModalTitle] = useState("مقدمة الدورة");
+    const [previewVideoId, setPreviewVideoId] = useState();
+
     function handleClick() {
         setItemIsOpened(!itemIsOpened);
     }
-    const router = useRouter();
-    function handleLessonClicked() {
-        router.push(`/courses/ai/${course.id}`)
+
+    function handleLessonClicked(lesson, event) {
+        setPreviewVideoId(lesson.video_id);
+        setShowModal(true);
+        setModalTitle(lesson.title);
     }
 
     return <div className={classes.chapterItem}>
@@ -50,6 +59,22 @@ const ChapterItem = (props) => {
         </div>
 
         <div className={classes.chapterUnderline}></div>
+        <VideoModal
+            onClose={() => {
+                setShowModal(false);
+                setModalTitle("");
+            }}
+            title={modalTitle}
+            show={showModal}>
+            <div className={classes.courseVideoPlayerContainer}>
+                <div className={classes.info}>
+                    <iframe className={classes.videoPlayer}
+                            src={"https://drive.google.com/file/d/" + previewVideoId + "/preview"}
+                            allowFullScreen={true}
+                            allow="autoplay"></iframe>
+                </div>
+            </div>
+        </VideoModal>
     </div>
 };
 

@@ -5,6 +5,7 @@ const AI_DATA = {
     instructorImage: "/me.png",
     numOfHours: "12",
     numOfVideos: "66",
+    coursePrice: "3800",
     numOfMonthsToComplete: "3",
     paymentLink: "https://paymes.shop/alashtrak-fy-dor-althkaaa-alastnaaay-lmaahd-atkan-234260637?p=link",
     introVideoId: "1AETv0996kMRsRR0DFMJZ_UxvwULl7N__",
@@ -101,31 +102,37 @@ const AI_DATA = {
             "insteadPrice": null,
             "lessons": [
                 {
+                    "free":true,
                     "title": "مقدمة عن Anaconda",
                     "video_id": "1AETv0996kMRsRR0DFMJZ_UxvwULl7N__",
                     "duration": "3"
                 },
                 {
+                    "free":true,
                     "title": "التعرف على Package Managers",
                     "video_id": "1khDjfjHhv8v8hosDe_4R_PdvXJlOpie3",
                     "duration": "1"
                 },
                 {
+                    "free":true,
                     "title": "طرق تشغيل كود البايثون",
                     "video_id": "1M0cuieTZLH6RnPYGMqEp3UX9DtCnBlxL",
                     "duration": "1"
                 },
                 {
+                    "free":true,
                     "title": "استخدام الIPython",
                     "video_id": "1jq66mFMgomvINkCjve-QKzZFjaP0Cjlj",
                     "duration": "7"
                 },
                 {
+                    "free":true,
                     "title": "استخدام الScript Mode",
                     "video_id": "1TqT4GDMzmx9xPOsm1926ELYZVjFsiX0v",
                     "duration": "4"
                 },
                 {
+                    "free":true,
                     "title": "استخدام Jupyter Notebook",
                     "video_id": "120UzrP9UtV5vpD5zPmvNp6LsHLH9GyAT",
                     "duration": "8"
@@ -146,86 +153,103 @@ const AI_DATA = {
             "insteadPrice": null,
             "lessons": [
                 {
+                    "free":true,
                     "title": "مقدمة عن ما ستتعلمه",
                     "video_id": "10LxQi32j3nLPXMs9Kz_9w7I6P9DdOghP",
                     "duration": "2",
                 },
                 {
+                    "free":true,
                     "title": "المتغيرات - Variables",
                     "video_id": "1g5sI0tVMA446wIz73nV8o7amQ9FIZo7p",
                     "duration": "8",
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 1",
                     "video_id": "1ErxTqIGQT_qfVJoBNSbv_7JJCvhdwP-s",
                     "duration": "2"
                 },
                 {
+                    "free":true,
                     "title": "العمليات الحسابية - Arithmetic Operations",
                     "video_id": "10De5Z84PkTcSVtT6LUmmu4lcnwCZ4iM_",
                     "duration": "6",
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 2",
                     "video_id": "1cyFlKYvFV-Hi99m9ks9kcti8hdtT6h32",
                     "duration": "1",
                 },
                 {
+                    "free":true,
                     "title": "طباعة النصوص - Print Strings",
                     "video_id": "1M09whhDQziLXOJgkXcNaF2-F-t_9yviS",
                     "duration": "7"
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 3",
                     "video_id": "1FZ5lgF6v82BrLCHwlSU8k75umrN3msLe",
                     "duration": "8"
                 },
                 {
+                    "free":true,
                     "title": "نصوص Double Quoted Strings",
                     "video_id": "1suLjpBEJtlf9sdckhfNj4vaxHk3yc-mb",
                     "duration": "5"
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 4",
                     "video_id": "15VNYXCJPm6xB9sZK-anqwxl385OFzqSe",
                     "duration": "2"
                 },
                 {
+                    "free":true,
                     "title": "ادخال البيانات - Input Function",
                     "video_id": "1OOVLF9vLs5TPtvFePg8ETbYoc4fG46lg",
                     "duration": "6"
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 5",
                     "video_id": "19lVKhWU9BXVrGixr22UGVsC39jLFWa0c",
                     "duration": "1"
                 },
                 {
+                    "free":true,
                     "title": "اتخاذ القرارات - Decision Making",
                     "video_id": "1rC6XYU88bWbMEr61eLSfEOb-WikgWqzv",
                     "duration": "10"
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 6",
                     "video_id": "1GLDMFszZYDIq-TfA3UaLszElNBgoScTT",
                     "duration": "1"
                 },
                 {
+                    "free":true,
                     "title": "Objects & Dynamic Typing",
                     "video_id": "1Va_UTD9zYgjcab3r-dKIQOkK5bZPV0RC",
                     "duration": "7"
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 7",
                     "video_id": "1KbrdY8E2fHTHKOM8UedxXUnofqSZIHsd",
                     "duration": "1"
                 },
                 {
+                    "free":true,
                     "title": "علوم البيانات و الاحصائات الوصفية  - Descriptive statistics",
                     "video_id": "1vLCV9PB8KD1LUE7uSb2ogiKKrKuCjKVR",
                     "duration": "5"
                 },
                 {
+                    "free":true,
                     "title": "اختبار - 8",
                     "video_id": "1OI-dlGvsG_MOeM3ELt6U2meJHz1Ub67n",
                     "duration": "1"
@@ -246,120 +270,143 @@ const AI_DATA = {
             "insteadPrice": null,
             "lessons": [
                 {
+                    "free":false,
                     "title": "مقدمة لما ستتعلمه",
                     "video_id": "1zwXaKcp8N1peHiv4Nj2qFeBTKqRxKzqh",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "if statement",
                     "video_id": "1OYtnqahtlxWgxvaPtud9rrqaFe2OJk5E",
                     "duration": "5"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 9",
                     "video_id": "1o3JMnA75nyTHARa7-MF1guxP8uRG_Ll9",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "أشكال مختلفة من if statement",
                     "video_id": "1mktzu59U8IJIHrjnZGKkvZ9kSNTYwwUb",
                     "duration": "7"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 10",
                     "video_id": "15n1Mdqg01J-yFpH1LQ6GJMBrGia3P-Ri",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "while statement",
                     "video_id": "1As_wle0sHRaJGbZX6Lgoul0KjrniIrvw",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 11",
                     "video_id": "1dpK-DD90dKWlFelflWY6-fIzHylaLOsz",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "For Loops",
                     "video_id": "19KUb40rcxeTfT7cH5zHPwgKH4utZgej6",
                     "duration": "6"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 12",
                     "video_id": "1CXj4-9B9gBMFiZcrT-3bQIH-amHSknle",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "العمليات الحسابية المختصرة - Augmented Assignment",
                     "video_id": "1elpxrtfVz11c83pZbPF3Soxy4UusHOaH",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 13",
                     "video_id": "1ZRVxDcpXjYWa2a-9I8KX5UcR0K4qs-ah",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "Sequence Controlled Iterations",
                     "video_id": "11GmmmKafP0rcpr4hhHfgg-peBTJh45OW",
                     "duration": "4"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 14",
                     "video_id": "19HIqYSfCQKzuGFU6RPhca_MV0Eeqi79m",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "Sentinel Controlled Iterations",
                     "video_id": "19UIKDrk_-NKrYlYbt4WYmxu9kroiwMBy",
                     "duration": "5"
                 },
                 {
+                    "free":false,
                     "title": "تفصيل أكبر عن الـ Range Function",
                     "video_id": "1n-DMUt2jJt7v_De_VptooxnJOap_Mw0v",
                     "duration": "5"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 15",
                     "video_id": "1e2aLbAlpqUEdDlRDAfiGBvs6I74cys3W",
                     "duration": "3"
                 },
                 {
+                    "free":false,
                     "title": "العمليات الحسابية الدقيقة - Decimal Type",
 
                     "video_id": "1kTjTuEJmxD7z_VXs-gXv239f_J6k6IGG",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 16",
                     "video_id": "1aRwpJh5sLRN2ZBvUVjqnYnxorvfDedn6",
                     "duration": "10"
                 },
                 {
+                    "free":false,
                     "title": "break & continue statements",
 
                     "video_id": "1p7Y8yLAZ04WirybYKzVw3NjC8iY1N_CW",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "المعاملات المنطقية - Boolean Operators",
 
                     "video_id": "1hKTHmz1yVMXQouoWiIbe2IPufSiiVH-p",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 17",
                     "video_id": "1QF5rdRPENNNF1As_YEXuBNhy5ZL6IgtD",
                     "duration": "4"
                 },
                 {
+                    "free":false,
                     "title": "علوم البيانات - معاملات التوسط",
 
                     "video_id": "1z7GO_XxDSxIxOCh7XwocaC2Z6qpUZQ5F",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 18",
                     "video_id": "1ZMehwZALrmCrmnwTwtjPGvMMKBxrhXwy",
                     "duration": "6"
@@ -381,101 +428,121 @@ const AI_DATA = {
             "insteadPrice": null,
             "lessons": [
                 {
+                    "free":false,
                     "title": "مقدمة لما ستتعلمه",
                     "video_id": "1bH5hytxrllwroOsGLafg0NvGC4005rja",
                     "duration": "4"
                 },
                 {
+                    "free":false,
                     "title": "ما هي الـFunction",
                     "video_id": "1FQnXvadYBQXn91jOm6Wpy4UqrEazWBC1",
                     "duration": "6"
                 },
                 {
+                    "free":false,
                     "title": "طريقة كتابة الـFunction",
                     "video_id": "1JumdK7qt9cYJL6sKk3eBASB6xDDJqGWe",
                     "duration": "7"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 19",
                     "video_id": "1poAyJO8nF1ByywNvGn6xoixL4YZXeU3i",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "استخدام الـFunction مع عدة متغيرات",
                     "video_id": "1LootwssXJhk39bRBAsMT_7CrzdZvUN1w",
                     "duration": "5"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 20",
                     "video_id": "16QZJ4yvje0oQkMDYUiRF5IdIzUENWxij",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "إنشاء أرقام عشوائية",
                     "video_id": "1PkMGe35gdx-4xWpFV3X5C1uNgn2aSTty",
                     "duration": "6"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 21",
                     "video_id": "14Q_pZFW6o2CbiRaUHX2IzJsaTfvymiCz",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "Functions with Tuples",
                     "video_id": "1ZfbaUprsWTUB51KxKfftYuHn3Ze2Sn75",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "Math Module",
                     "video_id": "1K-GcPmm0tsqTAxWFATq_pE6AGP5JBnHe",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "Default Parameters",
                     "video_id": "1Di-6z_hcTgaU3Ob3rJ4AnXThVv8KdFp3",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "Keyword Arguments",
                     "video_id": "1mnqLFNiyj5mCxN-wonILO_m9OUpsXxm0",
                     "duration": "3"
                 },
                 {
+                    "free":false,
                     "title": "Variable Arguments List",
                     "video_id": "1MFl-77vj-z9Z7RycOKgDPODO1fJ-Vmk5",
                     "duration": "3"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 22",
                     "video_id": "1hcqsNRZosro5aPsDxZZk8kYIP72m34KE",
                     "duration": "2"
                 },
                 {
+                    "free":false,
                     "title": "Methods",
                     "video_id": "15IALKQT-xrcWVmgbV9PToqdKIJQVCZQv",
                     "duration": "4"
                 },
                 {
+                    "free":false,
                     "title": "Scope Rule",
                     "video_id": "1fnqYgQbLdG5H257UkSE7pPJwQtRzN6bR",
                     "duration": "6"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 23",
                     "video_id": "1k7Q0I6kgaZHh1P7QoHizP60jU2n4P-UH",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "Passing Arguments to Function",
                     "video_id": "1VFQ9llFeMervJx4aoNZbc1dSi96n5QzX",
                     "duration": "6"
                 },
                 {
+                    "free":false,
                     "title": "اختبار - 24",
                     "video_id": "1Wbc8Ns4MP_dd-wQ6_rwc2-kklPG1Rw4V",
                     "duration": "1"
                 },
                 {
+                    "free":false,
                     "title": "Functional Style Programming",
                     "video_id": "17UBi5D51vTDxoABMdhPsanAQz8gtf7Am",
                     "duration": "4"

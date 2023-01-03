@@ -1,24 +1,46 @@
 import classes from '../../styles/SingleCoursePreview.module.css';
 import {getAiCourses} from "../../ai_courses_data";
 import PreviewChapterList from "../../components/Courses/CoursePreview/PreviewChapterList";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useReducer, useState} from "react";
 import {getDsCourses} from "../../ds_courses_data";
 import {getSession, useSession} from "next-auth/react";
 import {getUserByEmail} from "../../helpers/db";
 import {useRouter} from "next/router";
 import Modal from "../../components/tools/Modal";
 
+function init(initialState) {
+    return {pageState: initialState};
+}
+
+const initialState = {pageState: 'LoadingYourState'};
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'showEveryThing':
+            return {pageState: 'showEveryThing'};
+        case 'youDontHaveAccess':
+            return {pageState: 'youDontHaveAccess'};
+        case 'LoadingYourState':
+            return {pageState: 'LoadingYourState'};
+        default:
+            throw new Error();
+    }
+}
 
 const SingleCourse = (props) => {
     const router = useRouter();
     const courseId = props.coursesId;
 
     const {data: session, status} = useSession();
+
+    const [state, dispatch] = useReducer(reducer, initialState, init);
+
+
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [courseIsAvailable, setCourseIsAvailable] = useState(false);
 
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(true);
     const [modalTitle, setModalTitle] = useState("للأسف ليس لديك الصلاحية للوصول لهذه الدورة");
 
 
@@ -28,25 +50,21 @@ const SingleCourse = (props) => {
         const firstKey = Object.keys(loggedInUser)[0];
         if (loggedInUser[firstKey].myCourses.some(courseId => courseId === router.query.slug[0])) {
             setCourseIsAvailable(true);
+            dispatch({type: "showEveryThing"});
+            return;
         }
-
+        dispatch({type: "youDontHaveAccess"});
     });
 
     useEffect(() => {
-        getSession().then(session => {
+        getSession().then(async (session) => {
             if (session) {
-                setIsLoggedIn(true);
-            } else {
-                setIsLoggedIn(false);
-            }
-        }).then(async () => {
-            if (isLoggedIn) {
                 await checkIfCourseIsAvailable().catch(console.error);
+            }else{
+                dispatch({type: "youDontHaveAccess"});
             }
-        }).then(()=>{
-            setIsLoading(false);
         })
-    }, [router, checkIfCourseIsAvailable, isLoggedIn, isLoading]);
+    }, [checkIfCourseIsAvailable]);
 
 
     const courses = props.courses['sections'];
@@ -68,28 +86,26 @@ const SingleCourse = (props) => {
         setSelectedVideo(video);
     }
 
-    if (isLoading) {
+    if (state.pageState === 'LoadingYourState') {
         return <div>Loading...</div>
     }
 
-    if (!isLoggedIn || !courseIsAvailable) {
-        return <div>
-            <Modal
-                onClose={() => {
-                    setShowModal(false);
-                    setModalTitle("");
-                    router.replace(`/courses/${courseId}`);
-                }}
-                title={modalTitle}
-                show={showModal}>
+    if (state.pageState === 'youDontHaveAccess') {
+        return <Modal
+            onClose={() => {
+                setShowModal(false);
+                setModalTitle("");
+                router.replace(`/courses/${courseId}`);
+            }}
+            title={modalTitle}
+            show={showModal}>
 
-                <div style={{direction: "rtl"}}>
-                    يمكنك الالتحاق بهذه الدورة بعد دفع المصاريف
-                    أو بعد تفعيل حسابك خلال 24 ساعة إذا كنت قد دفعت بالفعل
-                </div>
+            <div style={{direction: "rtl"}}>
+                يمكنك الالتحاق بهذه الدورة بعد دفع المصاريف
+                أو بعد تفعيل حسابك خلال 24 ساعة إذا كنت قد دفعت بالفعل
+            </div>
 
-            </Modal>
-        </div>
+        </Modal>
     }
 
     return <div>

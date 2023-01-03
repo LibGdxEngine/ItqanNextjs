@@ -3,15 +3,17 @@ import Image from "next/image";
 import {getSession, useSession} from "next-auth/react";
 import Link from "next/link";
 import {useCallback, useEffect, useState} from "react";
-import Modal from "../../tools/Modal";
 import VideoModal from "../../tools/VideoModal";
 import {getUserByEmail} from "../../../helpers/db";
 import {useRouter} from "next/router";
 
 
 const CourseDetailsHeader = (props) => {
+    const course = props.course;
+
     const router = useRouter();
     const {data: session, status} = useSession();
+
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [courseIsAvailable, setCourseIsAvailable] = useState(false);
 
@@ -27,7 +29,6 @@ const CourseDetailsHeader = (props) => {
     const [showModal, setShowModal] = useState(false);
     const [modalTitle, setModalTitle] = useState("مقدمة الدورة");
 
-    const course = props.course;
 
     useEffect(() => {
         getSession().then(session => {
@@ -38,10 +39,14 @@ const CourseDetailsHeader = (props) => {
             }
         }).then(() => {
             if (isLoggedIn) {
-                checkIfCourseIsAvailable().catch(console.error);
+                if (course.coursePrice === "free") {
+                    setCourseIsAvailable(true);
+                } else {
+                    checkIfCourseIsAvailable().catch(console.error);
+                }
             }
         })
-    }, [isLoggedIn, checkIfCourseIsAvailable]);
+    }, [isLoggedIn, checkIfCourseIsAvailable, course]);
 
     return <div className={classes.header}>
         <div className={classes.courseDetailsContainer}>
@@ -74,7 +79,8 @@ const CourseDetailsHeader = (props) => {
                 <div className={classes.courseTiming}>
                     <div className={classes.courseTimingContainer}>
                         <Image src={"/calender.png"} width={20} height={20} alt={""}></Image>
-                        <span className={classes.courseTimingMonths}>مدة الدورة {course.numOfMonthsToComplete} أشهر</span>
+                        <span
+                            className={classes.courseTimingMonths}>مدة الدورة {course.numOfMonthsToComplete} أشهر</span>
                     </div>
                     <span>/</span>
                     <div className={classes.courseTimingContainer}>

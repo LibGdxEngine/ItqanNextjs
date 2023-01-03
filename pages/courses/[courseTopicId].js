@@ -14,7 +14,6 @@ const SingleTopicCourses = (props) => {
 
 export async function getServerSideProps(context) {
     const courseTopicId = context.params.courseTopicId;
-    console.log(courseTopicId)
     // const course = getCourseId(coursesId)
     let courses = null;
     if (courseTopicId === "ai") {
