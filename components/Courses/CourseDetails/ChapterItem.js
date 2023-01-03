@@ -13,6 +13,8 @@ const ChapterItem = (props) => {
     const childHeight = `${course.lessons.length * 100 / 16}rem`;
     const [itemIsOpened, setItemIsOpened] = useState(false);
 
+    const courseIsAvailable = props.courseIsAvailable;
+
     const [showModal, setShowModal] = useState(false);
     const [modalTitle, setModalTitle] = useState("مقدمة الدورة");
     const [previewVideoId, setPreviewVideoId] = useState();
@@ -53,7 +55,7 @@ const ChapterItem = (props) => {
         }}>
 
             {course.lessons.map(lesson => {
-                return <LessonItem onLessonClicked={handleLessonClicked} key={lesson.title} lesson={lesson}/>
+                return <LessonItem onLessonClicked={handleLessonClicked} key={lesson.title} lesson={lesson} courseIsAvailable={courseIsAvailable}/>
             })}
 
         </div>

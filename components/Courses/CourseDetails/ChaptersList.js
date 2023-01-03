@@ -5,10 +5,11 @@ import ChapterItem from "./ChapterItem";
 
 const ChaptersList = (props) => {
     const courses = props.courses['sections'];
+    const courseIsAvailable= props.courseIsAvailable;
 
     return <div className={classes.chaptersList}>
         {courses.map((course, index) => {
-            return <ChapterItem key={course.id} course={course}/>
+            return <ChapterItem key={course.id} course={course} courseIsAvailable={courseIsAvailable}/>
         })}
     </div>
 };

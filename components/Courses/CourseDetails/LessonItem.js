@@ -4,8 +4,21 @@ import {useRouter} from "next/router";
 
 const LessonItem = (props) => {
     const lesson = props.lesson;
+    const courseIsAvailable = props.courseIsAvailable;
 
-    return <div onClick={lesson.free ? props.onLessonClicked.bind(this, lesson) : null} className={classes.chapterVideosContent} key={lesson.video_id}>
+
+    return <div onClick={() => {
+        if(lesson.free){
+            props.onLessonClicked(lesson);
+            return;
+        }
+        if (courseIsAvailable) {
+            props.onLessonClicked(lesson);
+            return;
+        }
+    }
+    }
+                className={classes.chapterVideosContent} key={lesson.video_id}>
         <div className={classes.chapterVideoDetailsContainer}>
             <div className={classes.chapterTimingContainer}>
                 <Image className={classes.chapterTimingIcon} src={"/time-black.png"} width={20} height={20}
@@ -15,14 +28,24 @@ const LessonItem = (props) => {
         </div>
         <div className={classes.chapterVideoTitleContainer}>
             <h5 className={classes.chapterVideoTitle}>{lesson.title}</h5>
-            {lesson.free ?
+            {(lesson.free) ?
                 <Image className={classes.videoIcon}
-                                  src={"/circle-play.png"} width={30} height={30}
-                                  alt={""}></Image>
+                       src={"/circle-play.png"} width={30} height={30}
+                       alt={""}></Image>
                 :
-                <Image className={classes.videoIcon}
-                       src={"/lock.png"} width={30} height={30}
-                       alt={""}></Image>}
+                <>
+                    {courseIsAvailable ?
+                        <Image className={classes.videoIcon}
+                               src={"/circle-play.png"} width={30} height={30}
+                               alt={""}></Image>
+                        :
+                        <Image className={classes.videoIcon}
+                               src={"/lock.png"} width={30} height={30}
+                               alt={""}></Image>}
+
+                </>
+            }
+
 
         </div>
     </div>

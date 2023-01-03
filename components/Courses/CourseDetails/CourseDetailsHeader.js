@@ -1,52 +1,18 @@
 import classes from "./CourseDetailsHeader.module.css";
 import Image from "next/image";
-import {getSession, useSession} from "next-auth/react";
 import Link from "next/link";
-import {useCallback, useEffect, useState} from "react";
+import {useState} from "react";
 import VideoModal from "../../tools/VideoModal";
-import {getUserByEmail} from "../../../helpers/db";
-import {useRouter} from "next/router";
 
 
 const CourseDetailsHeader = (props) => {
     const course = props.course;
 
-    const router = useRouter();
-    const {data: session, status} = useSession();
-
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [courseIsAvailable, setCourseIsAvailable] = useState(false);
-
-    const checkIfCourseIsAvailable = useCallback(async () => {
-        const loggedInUser = await getUserByEmail(session.user.email);
-        const firstKey = Object.keys(loggedInUser)[0];
-        if (loggedInUser[firstKey].myCourses.some(courseId => courseId === router.query.courseTopicId)) {
-            setCourseIsAvailable(true);
-        }
-    }, [router, session]);
-
-
     const [showModal, setShowModal] = useState(false);
     const [modalTitle, setModalTitle] = useState("مقدمة الدورة");
 
-
-    useEffect(() => {
-        getSession().then(session => {
-            if (session) {
-                setIsLoggedIn(true);
-            } else {
-                setIsLoggedIn(false);
-            }
-        }).then(() => {
-            if (isLoggedIn) {
-                if (course.coursePrice === "free") {
-                    setCourseIsAvailable(true);
-                } else {
-                    checkIfCourseIsAvailable().catch(console.error);
-                }
-            }
-        })
-    }, [isLoggedIn, checkIfCourseIsAvailable, course]);
+    const isLoggedIn = props.isLoggedIn;
+    const courseIsAvailable = props.courseIsAvailable;
 
     return <div className={classes.header}>
         <div className={classes.courseDetailsContainer}>
