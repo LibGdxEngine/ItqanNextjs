@@ -61,11 +61,23 @@ const CourseDetailsHeader = (props) => {
                 </div>
 
                 <div className={classes.buyCourseBtnContainer}>
-                    {(!isLoggedIn || !courseIsAvailable) && <Link
-                        href={course.paymentLink}
-                        className={classes.buyCourseBtn}>اشترك الأن</Link>}
-                    {(isLoggedIn && courseIsAvailable) &&
-                        <Link href="/courses/ai/0" className={classes.buyCourseBtn}>شاهد الدورة</Link>}
+                    {(!isLoggedIn && course.coursePrice !== "0") && <Link
+                        href="/login"
+                        className={classes.buyCourseBtn}>سجل الان</Link>}
+                    {(!isLoggedIn && course.coursePrice === "0") && <Link
+                        href="/login"
+                        className={classes.buyCourseBtn}>سجل الان</Link>}
+                    {(isLoggedIn) && <>
+                        {(course.coursePrice === "0") &&
+                            <Link href="/courses/ai/0" className={classes.buyCourseBtn}>شاهد الدورة</Link>}
+                        {(course.coursePrice !== "0" && courseIsAvailable) &&
+                            <Link href="/courses/ai/0" className={classes.buyCourseBtn}>شاهد الدورة</Link>}
+                        {(course.coursePrice !== "0" && !courseIsAvailable) &&
+                            <Link
+                                href={course.paymentLink}
+                                className={classes.buyCourseBtn}>اشترك الأن</Link>}
+                    </>
+                    }
                 </div>
             </div>
         </div>

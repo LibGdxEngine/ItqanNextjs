@@ -76,17 +76,17 @@ const Footer = (props) => {
                         <p><i className="fa fa-phone-alt mr-2"></i>+02 0101 98 67 911</p>
                         {/*<p><i className="fa fa-envelope mr-2"></i>info@example.com</p>*/}
                         <div className="d-flex justify-content-start mt-4">
-                            <a className="text-white mr-4" href="#"><Image src={facebookIcon} alt={""} width={30} height={30} /></a>
-                            <a className="text-white mr-4" href="#"><Image src={linkedinIcon} alt={""} width={30} height={30} /></a>
-                            <a className="text-white mr-4" href="#"><Image src={"./facebook.png"} alt={""} width={30} height={30} /></a>
-                            <a className="text-white" href="#"><i className="fab fa-2x fa-instagram"></i></a>
+                            <Link className="text-white mr-4" href="https://www.facebook.com/profile.php?id=100088815550847"><Image src={facebookIcon} alt={""} width={30} height={30} /></Link>
+                            <Link className="text-white mr-4" href="#"><Image src={linkedinIcon} alt={""} width={30} height={30} /></Link>
+                            {/*<a className="text-white mr-4" href="#"><Image src={"./facebook.png"} alt={""} width={30} height={30} /></a>*/}
+                            {/*<a className="text-white" href="#"><i className="fab fa-2x fa-instagram"></i></a>*/}
                         </div>
                     </div>
                     <div className="col-md-4 mb-5">
                         <h3 className="text-white mb-4">دوراتنا المميزة</h3>
                         <div className="d-flex flex-column justify-content-start">
-                            <a className="text-white-50 mb-2" href="courses/ai"><i
-                                className="fa fa-angle-right mr-2"></i>الذكاء الصناعي وعلوم البيانات</a>
+                            <Link className="text-white-50 mb-2" href="/courses/ai"><i
+                                className="fa fa-angle-right mr-2"></i>الذكاء الصناعي وعلوم البيانات</Link>
                             {/*<a className="text-white-50 mb-2" href="#"><i*/}
                             {/*    className="fa fa-angle-right mr-2"></i>تطوير التطبيقات</a>*/}
                             {/*<a className="text-white-50 mb-2" href="#"><i*/}

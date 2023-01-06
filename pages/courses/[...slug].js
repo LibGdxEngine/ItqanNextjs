@@ -1,7 +1,7 @@
 import classes from '../../styles/SingleCoursePreview.module.css';
 import {getAiCourses} from "../../ai_courses_data";
 import PreviewChapterList from "../../components/Courses/CoursePreview/PreviewChapterList";
-import {useCallback, useEffect, useReducer, useState} from "react";
+import {useCallback, useEffect, useMemo, useReducer, useState} from "react";
 import {getDsCourses} from "../../ds_courses_data";
 import {getSession, useSession} from "next-auth/react";
 import {getUserByEmail} from "../../helpers/db";
@@ -28,6 +28,9 @@ function reducer(state, action) {
 }
 
 const SingleCourse = (props) => {
+    const courses = props.courses['sections'];
+
+    const coursePrice = useMemo(() => props.courses.coursePrice, [props.courses.coursePrice]);
     const router = useRouter();
     const courseId = props.coursesId;
 
@@ -36,38 +39,38 @@ const SingleCourse = (props) => {
     const [state, dispatch] = useReducer(reducer, initialState, init);
 
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
-    const [courseIsAvailable, setCourseIsAvailable] = useState(false);
-
     const [showModal, setShowModal] = useState(true);
     const [modalTitle, setModalTitle] = useState("للأسف ليس لديك الصلاحية للوصول لهذه الدورة");
 
 
     const checkIfCourseIsAvailable = useCallback(async () => {
+
         const loggedInUser = await getUserByEmail(session.user.email);
 
         const firstKey = Object.keys(loggedInUser)[0];
         if (loggedInUser[firstKey].myCourses.some(courseId => courseId === router.query.slug[0])) {
-            setCourseIsAvailable(true);
             dispatch({type: "showEveryThing"});
             return;
         }
         dispatch({type: "youDontHaveAccess"});
-    });
+    }, [session, router.query.slug]);
 
     useEffect(() => {
-        getSession().then(async (session) => {
-            if (session) {
-                await checkIfCourseIsAvailable().catch(console.error);
-            }else{
-                dispatch({type: "youDontHaveAccess"});
-            }
-        })
-    }, [checkIfCourseIsAvailable]);
+        if (coursePrice === "0") {
+            dispatch({type: "showEveryThing"});
+        } else {
+            getSession().then(async (session) => {
+                if (session) {
+                    await checkIfCourseIsAvailable().catch(console.error);
+                } else {
+                    dispatch({type: "youDontHaveAccess"});
+                }
+            })
+        }
+
+    }, [checkIfCourseIsAvailable, coursePrice]);
 
 
-    const courses = props.courses['sections'];
     let videoNumber = props.videoNumber;
 
     let videosList = [];

@@ -4,7 +4,7 @@ const AI_DATA = {
     instructor: "أحمد فتحي",
     instructorImage: "/me.png",
     numOfHours: "12",
-    numOfVideos: "66",
+    numOfVideos: "67",
     coursePrice: "3800",
     numOfMonthsToComplete: "3",
     paymentLink: "https://paymes.shop/alashtrak-fy-dor-althkaaa-alastnaaay-lmaahd-atkan-234260637?p=link",
@@ -91,7 +91,6 @@ const AI_DATA = {
         {
             "id": "1",
             "instructor": 'أحمد فتحي',
-            "time": "1h 20m",
             "image": "/ai_courses/intro.png",
             "imageAlt": "",
             "description": "هذه الدورة الأولى في سلسلة دورات الذكاء الصناعي وعلوم البيانات وهي دورة قوية ومهمة لكل طالب ذكاء صناعي",
@@ -142,7 +141,6 @@ const AI_DATA = {
         {
             "id": "2",
             "instructor": 'أحمد فتحي',
-            "time": "1h 20m",
             "image": "/ai_courses/python101.png",
             "imageAlt": "",
             "description": "هذه الدورة الأولى في سلسلة دورات الذكاء الصناعي وعلوم البيانات وهي دورة قوية ومهمة لكل طالب ذكاء صناعي",
@@ -259,7 +257,6 @@ const AI_DATA = {
         {
             "id": "3",
             "instructor": 'أحمد فتحي',
-            "time": "1h 20m",
             "image": "/ai_courses/python102.png",
             "imageAlt": "",
             "description": "هذه الدورة الأولى في سلسلة دورات الذكاء الصناعي وعلوم البيانات وهي دورة قوية ومهمة لكل طالب ذكاء صناعي",
@@ -417,14 +414,13 @@ const AI_DATA = {
         {
             "id": "4",
             "instructor": 'أحمد فتحي',
-            "time": "1h 20m",
             "image": "/ai_courses/python103.png",
             "imageAlt": "",
             "description": "هذه الدورة الأولى في سلسلة دورات الذكاء الصناعي وعلوم البيانات وهي دورة قوية ومهمة لكل طالب ذكاء صناعي",
             "title": "Functions",
             "level": "مستوى مبتديء",
             "price": "مجانا",
-            "duration": "68",
+            "duration": "77",
             "insteadPrice": null,
             "lessons": [
                 {
@@ -546,6 +542,12 @@ const AI_DATA = {
                     "title": "Functional Style Programming",
                     "video_id": "17UBi5D51vTDxoABMdhPsanAQz8gtf7Am",
                     "duration": "4"
+                },
+                {
+                    "free":false,
+                    "title": "Data science Measure of dispersion",
+                    "video_id": "1FEGhgAED4KGr6GndC26z5SjJdjSJ-hLn",
+                    "duration": "9"
                 },
             ]
         },

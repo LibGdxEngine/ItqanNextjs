@@ -56,7 +56,7 @@ export default function OurInstructorsSlider() {
                                 <Link className="mx-1 p-1" href="https://www.facebook.com/profile.php?id=100081568971018"><Image src="/facebook.png" width={35} height={35}
                                                                                                                       alt="facebook"
                                                                                                                       className="fab fa-facebook-f"></Image></Link>
-                                <Link className="mx-1 p-1" href="components/LandingPage/OurInstructorsSlider#"><Image src="/linkedin.png" width={35} height={35}
+                                <Link className="mx-1 p-1" href="https://www.linkedin.com/in/ahmed-fathy-zain"><Image src="/linkedin.png" width={35} height={35}
                                                                                                                       alt="linkedin"
                                                                                                                       className="fab fa-facebook-f"></Image></Link>
                             </div>
